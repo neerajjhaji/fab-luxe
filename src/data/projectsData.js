@@ -40,7 +40,7 @@ export const TYPOLOGIES = [
     carpetArea: '1,420 – 1,680 Sq. Ft.',
     price: '₹ 2.96 Cr* Onwards',
     description: 'Expansive 3-bedroom residence with private servant room, 8-ft deep wrap-around sundeck balcony, high ceilings, and double-height living spaces.',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/1.png',
     floorPlanImg: '/images/virtual_site.png',
     highlights: [
       'Private Lift Lobby for Select Units',
@@ -57,7 +57,7 @@ export const TYPOLOGIES = [
     carpetArea: '2,010 – 2,450 Sq. Ft.',
     price: 'Price On Request (VIP Exclusive)',
     description: 'Ultra-luxurious 4-bedroom estate with dual corner balconies, formal foyer, private bar space, chef-grade modular kitchen, and maid quarters.',
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/2.png',
     floorPlanImg: '/images/virtual_site.png',
     highlights: [
       'Ultra Panoramic 270° Park View Balconies',
@@ -75,42 +75,42 @@ export const AMENITIES_LIST = [
     category: 'Lifestyle & Leisure',
     desc: 'Featuring private cigar lounge, temperature-controlled indoor pool, heated jacuzzi, mini bowling alley, and private movie screening theatre.',
     icon: 'Crown',
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80'
+    image: '/images/3.png'
   },
   {
     title: 'Resort-Style Lagoon Pool',
     category: 'Aqua Oasis',
     desc: 'Olympic-sized infinity edge swimming pool with cabanas, sunken pool bar, kids splash pad, and sunbathing decks surrounded by tropical palms.',
     icon: 'Waves',
-    image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80'
+    image: '/images/banner.jpeg'
   },
   {
     title: 'AQI-Managed Botanical Gardens',
     category: 'Eco Wellness',
     desc: 'Advanced ambient air purification systems in lush oxygen-rich gardens, sensory walking trails, zen reflexology pathways, and outdoor yoga lawns.',
     icon: 'Trees',
-    image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80'
+    image: '/images/about_bg.png'
   },
   {
     title: 'Elite Sports & Athletics Academy',
     category: 'Sports & Active',
     desc: 'All-weather floodlit tennis courts, squash courts, indoor badminton arena, half-court basketball, and high-tech golf simulator studio.',
     icon: 'Trophy',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80'
+    image: '/images/1.png'
   },
   {
     title: 'Forbes Global Concierge Service',
     category: 'Hospitality',
     desc: '24/7 dedicated white-glove concierge, valet parking, private chef booking, airport luxury transfer assistance, and housekeeping on demand.',
     icon: 'ShieldCheck',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80'
+    image: '/images/2.png'
   },
   {
     title: 'State-of-the-Art Fitness Club',
     category: 'Health & Wellness',
     desc: 'Equipped with Technogym machines, cross-fit zone, Pilates studio, steam & sauna rooms, and personal wellness advisory.',
     icon: 'Activity',
-    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80'
+    image: '/images/location_bg.png'
   }
 ];
 
@@ -208,7 +208,7 @@ export const COLLECTIONS_DATA = [
     price: 'Starting ₹ 2.96 Cr*',
     area: '2,250 – 2,650 Sq. Ft.',
     tag: '3+1 BHK Resort Suites',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    image: '/images/1.png',
     features: ['Double Height Living', 'Pool View Deck', 'Italian Marble Flooring', 'Smart Automation']
   },
   {
@@ -218,7 +218,7 @@ export const COLLECTIONS_DATA = [
     price: 'Price On Request',
     area: '3,150 – 3,850 Sq. Ft.',
     tag: '4+1 BHK Grand Suites',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    image: '/images/2.png',
     features: ['Private Elevator Access', '270° Panoramic Views', 'Jacuzzi Sundeck', '2 Car Parking Included']
   },
   {
@@ -228,7 +228,7 @@ export const COLLECTIONS_DATA = [
     price: 'Exclusive VIP Invitation',
     area: '5,200+ Sq. Ft.',
     tag: 'Duplex Sky Mansions',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80',
+    image: '/images/3.png',
     features: ['Private Rooftop Plunge Pool', 'Personal Terrace Garden', 'Custom Interior Architecture', '24/7 Butler Service']
   }
 ];

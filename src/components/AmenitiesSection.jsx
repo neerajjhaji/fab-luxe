@@ -12,7 +12,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
       category: 'clubhouse',
       categoryLabel: 'Clubhouse & Leisure',
       icon: Crown,
-      image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/3.png',
       shortDesc: '6-Star hospitality clubhouse featuring heated indoor pool, private cigar lounge, bowling alley, and private movie screening theatre.',
       fullSpecs: [
         'Temperature-Controlled All-Weather Indoor Lap Pool',
@@ -29,7 +29,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
       category: 'aqua',
       categoryLabel: 'Aqua & Wellness',
       icon: Waves,
-      image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/banner.jpeg',
       shortDesc: 'Olympic-sized infinity edge swimming pool with cabanas, sunken pool bar, kids splash pad, and sunbathing decks surrounded by tropical palms.',
       fullSpecs: [
         'Temperature-Regulated Heated Jacuzzi & Hydrotherapy Spa',
@@ -44,7 +44,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
       category: 'green',
       categoryLabel: 'Eco Wellness',
       icon: Trees,
-      image: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/about_bg.png',
       shortDesc: 'Advanced ambient air purification microclimate in lush oxygen-rich gardens, sensory walking trails, zen reflexology pathways, and outdoor yoga lawns.',
       fullSpecs: [
         'Air-Purifying Flora (Areca Palms, Sansevieria, Peace Lilies)',
@@ -59,7 +59,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
       category: 'sports',
       categoryLabel: 'Sports & Active',
       icon: Trophy,
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/1.png',
       shortDesc: 'All-weather floodlit tennis courts, squash courts, indoor badminton arena, half-court basketball, and high-tech golf simulator studio.',
       fullSpecs: [
         '2 Pro-Grade Floodlit Synthetic Surface Tennis Courts',
@@ -74,7 +74,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
       category: 'sports',
       categoryLabel: 'Sports & Active',
       icon: Activity,
-      image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/location_bg.png',
       shortDesc: 'Equipped with Technogym machines, cross-fit zone, Pilates reformer studio, steam & sauna rooms, and personal wellness advisory.',
       fullSpecs: [
         'Latest Technogym ARTIS Line Cardiovascular Equipment',
@@ -89,7 +89,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
       category: 'security',
       categoryLabel: 'Security & Tech',
       icon: ShieldCheck,
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/2.png',
       shortDesc: '24/7 dedicated white-glove concierge, valet parking, private elevator access, AI license plate recognition, and 5-tier perimeter security.',
       fullSpecs: [
         'AI Automatic Number Plate Recognition (ANPR) Gates',

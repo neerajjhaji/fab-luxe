@@ -7,21 +7,21 @@ const HERO_SLIDES = [
     subtitle: "13-Acre Ultra-Low Density Campus • 11 G+35 Sky Towers • 75,000 Sq. Ft. Grand Clubhouse",
     price: "3+1 & 4+1 BHK Serviced Residences starting ₹ 2.96 Cr*",
     badge: "13-ACRE RESORT LANDMARK",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80"
+    image: "/images/banner.jpeg"
   },
   {
     title: "75,000 Sq. Ft. 6-Star Private Resident Club",
     subtitle: "All-Weather Lagoon Pool • Technogym Fitness Center • AQI Monitored Oxygen Gardens",
     price: "Complimentary 3 Years Forbes Managed Concierge Privileges",
     badge: "6-STAR COUNTRY CLUB",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=2000&q=80"
+    image: "/images/1.png"
   },
   {
     title: "Wrap-Around Sundecks & Sky Penthouse Views",
     subtitle: "8 Ft Deep Panoramic Balconies • Double-Height Living Volumes • VRV Air Conditioning",
     price: "3+1 BHK (2,250 - 2,650 Sq.Ft.) & 4+1 BHK (3,150 - 3,850 Sq.Ft.)",
     badge: "ARCHITECTURAL SUITES",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80"
+    image: "/images/2.png"
   }
 ];
 

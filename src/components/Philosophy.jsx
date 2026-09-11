@@ -59,7 +59,7 @@ export default function Philosophy() {
             boxShadow: '0 12px 32px rgba(0,0,0,0.06)'
           }}>
             <img
-              src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+              src="/images/about_bg.png"
               alt="Forbes Fab Luxe Architectural Excellence"
               style={{
                 width: '100%',
