@@ -1,0 +1,372 @@
+import React, { useState } from 'react';
+import { TYPOLOGIES } from '../data/projectsData';
+import { Calculator } from 'lucide-react';
+
+export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
+  const [selectedTypology, setSelectedTypology] = useState('all');
+  const [selectedView, setSelectedView] = useState('all');
+  const [selectedBudget, setSelectedBudget] = useState('all');
+
+  // Dynamic Interactive EMI Calculator State
+  const [propertyVal, setPropertyVal] = useState(29600000); // 2.96 Cr
+  const [downPayPercent, setDownPayPercent] = useState(20); // 20%
+  const [loanTenureYears, setLoanTenureYears] = useState(20); // 20 Years
+  const [interestRate, setInterestRate] = useState(8.5); // 8.5%
+
+  const loanAmount = propertyVal * ((100 - downPayPercent) / 100);
+  const downPaymentVal = propertyVal * (downPayPercent / 100);
+
+  const calculateEMI = () => {
+    const r = interestRate / (12 * 100);
+    const n = loanTenureYears * 12;
+    const emi = (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    return Math.round(emi);
+  };
+
+  const monthlyEMI = calculateEMI();
+
+  const filteredItems = TYPOLOGIES.filter(item => {
+    if (selectedTypology !== 'all' && item.id !== selectedTypology) return false;
+    return true;
+  });
+
+  return (
+    <section style={{
+      width: '100%',
+      backgroundColor: '#15120E',
+      padding: '90px 4vw',
+      color: '#FFFFFF',
+      borderTop: '1px solid rgba(200, 164, 100, 0.2)',
+      boxSizing: 'border-box'
+    }}>
+      <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div style={{
+            fontSize: '12px',
+            color: '#C8A464',
+            textTransform: 'uppercase',
+            letterSpacing: '2.5px',
+            fontWeight: '700',
+            marginBottom: '10px'
+          }}>
+            INTERACTIVE SUITE FINDER & FINANCIAL ESTIMATOR
+          </div>
+          <h2 style={{
+            fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif",
+            fontSize: 'clamp(32px, 4vw, 48px)',
+            fontWeight: '700',
+            color: '#FFFFFF'
+          }}>
+            Discover Your Residence & Customize Payment Schedule
+          </h2>
+          <p style={{ fontSize: '15px', color: '#B0A89C', maxWidth: '650px', margin: '8px auto 0' }}>
+            Filter Sector 4 residences by typology and test instant real-time bank subvention & loan payment estimates.
+          </p>
+        </div>
+
+        {/* Filter Controls Bar */}
+        <div style={{
+          backgroundColor: '#0D0B09',
+          border: '1px solid #C8A464',
+          borderRadius: '6px',
+          padding: '24px 32px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          gap: '24px',
+          marginBottom: '40px',
+          boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+        }}>
+          {/* Typology Dropdown */}
+          <div>
+            <label style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
+              Select Typology
+            </label>
+            <select
+              value={selectedTypology}
+              onChange={(e) => setSelectedTypology(e.target.value)}
+              style={{
+                width: '100%',
+                backgroundColor: '#15120E',
+                color: '#FFFFFF',
+                border: '1px solid rgba(200, 164, 100, 0.3)',
+                padding: '12px 14px',
+                borderRadius: '4px',
+                fontSize: '13px',
+                outline: 'none',
+                fontFamily: 'inherit'
+              }}
+            >
+              <option value="all">All Typologies (3+1 & 4+1 BHK)</option>
+              <option value="3bhk">3+1 BHK (2,250 - 2,650 Sq.Ft.)</option>
+              <option value="4bhk">4+1 BHK (3,150 - 3,850 Sq.Ft.)</option>
+            </select>
+          </div>
+
+          {/* View Dropdown */}
+          <div>
+            <label style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
+              Preferred Orientation / View
+            </label>
+            <select
+              value={selectedView}
+              onChange={(e) => setSelectedView(e.target.value)}
+              style={{
+                width: '100%',
+                backgroundColor: '#15120E',
+                color: '#FFFFFF',
+                border: '1px solid rgba(200, 164, 100, 0.3)',
+                padding: '12px 14px',
+                borderRadius: '4px',
+                fontSize: '13px',
+                outline: 'none',
+                fontFamily: 'inherit'
+              }}
+            >
+              <option value="all">All Views & Facing</option>
+              <option value="pool">Resort Lagoon Pool View</option>
+              <option value="garden">Botanical Oxygen Garden View</option>
+              <option value="skyline">270° Panoramic Skyline View</option>
+            </select>
+          </div>
+
+          {/* Budget Filter */}
+          <div>
+            <label style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
+              Price Range
+            </label>
+            <select
+              value={selectedBudget}
+              onChange={(e) => setSelectedBudget(e.target.value)}
+              style={{
+                width: '100%',
+                backgroundColor: '#15120E',
+                color: '#FFFFFF',
+                border: '1px solid rgba(200, 164, 100, 0.3)',
+                padding: '12px 14px',
+                borderRadius: '4px',
+                fontSize: '13px',
+                outline: 'none',
+                fontFamily: 'inherit'
+              }}
+            >
+              <option value="all">All Price Brackets</option>
+              <option value="sub3">₹ 2.96 Cr - ₹ 3.50 Cr</option>
+              <option value="sub5">₹ 3.50 Cr - ₹ 5.00 Cr</option>
+              <option value="above5">₹ 5.00 Cr+ (Presidential)</option>
+            </select>
+          </div>
+
+          {/* Reset Action */}
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '10px' }}>
+            <button
+              onClick={() => { setSelectedTypology('all'); setSelectedView('all'); setSelectedBudget('all'); }}
+              style={{
+                flex: 1,
+                padding: '12px',
+                backgroundColor: '#C8A464',
+                color: '#0D0B09',
+                border: 'none',
+                borderRadius: '4px',
+                fontWeight: '700',
+                fontSize: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                cursor: 'pointer'
+              }}
+            >
+              Reset Filters
+            </button>
+          </div>
+        </div>
+
+        {/* Results Showcase Grid */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '24px', marginBottom: '60px' }}>
+          {filteredItems.map(item => (
+            <div key={item.id} style={{
+              backgroundColor: '#0D0B09',
+              border: '1px solid rgba(200,164,100,0.3)',
+              borderRadius: '6px',
+              padding: '28px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between'
+            }}>
+              <div>
+                <div style={{ fontSize: '11px', color: '#C8A464', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>
+                  {item.superArea} • Sector 4
+                </div>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '26px', color: '#FFFFFF', marginBottom: '8px' }}>
+                  {item.title}
+                </h3>
+                <div style={{ fontSize: '22px', color: '#C8A464', fontWeight: '700', fontFamily: "'Cormorant Garamond', serif", marginBottom: '14px' }}>
+                  {item.price}
+                </div>
+                <p style={{ fontSize: '13px', color: '#A0988A', lineHeight: '1.5', marginBottom: '16px' }}>
+                  {item.description}
+                </p>
+              </div>
+
+              <div style={{ display: 'flex', gap: '10px' }}>
+                <button
+                  onClick={onOpenSiteVisit}
+                  style={{
+                    flex: 1,
+                    padding: '12px',
+                    background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
+                    color: '#0D0B09',
+                    border: 'none',
+                    fontWeight: '700',
+                    fontSize: '12px',
+                    textTransform: 'uppercase',
+                    borderRadius: '2px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Book Private Visit
+                </button>
+                <button
+                  onClick={onOpenFloorPlan}
+                  style={{
+                    padding: '12px 18px',
+                    background: 'transparent',
+                    border: '1px solid #C8A464',
+                    color: '#C8A464',
+                    fontWeight: '600',
+                    fontSize: '12px',
+                    textTransform: 'uppercase',
+                    borderRadius: '2px',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Floor Plan
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* DYNAMIC REAL-TIME EMI CALCULATOR CARD */}
+        <div style={{
+          backgroundColor: '#0D0B09',
+          border: '2px solid #C8A464',
+          borderRadius: '8px',
+          padding: '36px',
+          boxShadow: '0 20px 50px rgba(0,0,0,0.8)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#C8A464', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px' }}>
+            <Calculator size={18} />
+            DYNAMIC PAYMENT & EMI SLIDER CALCULATOR
+          </div>
+
+          <h3 style={{ fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif", fontSize: '28px', color: '#FFFFFF', fontWeight: '700', marginBottom: '24px' }}>
+            Test Instant Loan EMI & Custom Down Payment
+          </h3>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '32px', alignItems: 'center' }}>
+            {/* Sliders Column */}
+            <div style={{ display: 'grid', gap: '20px' }}>
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#D0D0D0', marginBottom: '8px' }}>
+                  <span>Property Price Value:</span>
+                  <strong style={{ color: '#C8A464' }}>₹ {(propertyVal / 10000000).toFixed(2)} Cr</strong>
+                </div>
+                <input
+                  type="range"
+                  min="29600000"
+                  max="60000000"
+                  step="1000000"
+                  value={propertyVal}
+                  onChange={(e) => setPropertyVal(Number(e.target.value))}
+                  style={{ width: '100%', accentColor: '#C8A464', cursor: 'pointer' }}
+                />
+              </div>
+
+              <div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#D0D0D0', marginBottom: '8px' }}>
+                  <span>Down Payment ({downPayPercent}%):</span>
+                  <strong style={{ color: '#C8A464' }}>₹ {(downPaymentVal / 100000).toFixed(2)} Lakhs</strong>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="50"
+                  step="5"
+                  value={downPayPercent}
+                  onChange={(e) => setDownPayPercent(Number(e.target.value))}
+                  style={{ width: '100%', accentColor: '#C8A464', cursor: 'pointer' }}
+                />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+                <div>
+                  <div style={{ fontSize: '12px', color: '#A0988A', marginBottom: '6px' }}>Loan Tenure:</div>
+                  <select
+                    value={loanTenureYears}
+                    onChange={(e) => setLoanTenureYears(Number(e.target.value))}
+                    style={{ width: '100%', backgroundColor: '#15120E', border: '1px solid rgba(200,164,100,0.3)', color: '#FFFFFF', padding: '10px', borderRadius: '4px', fontSize: '13px' }}
+                  >
+                    <option value={10}>10 Years</option>
+                    <option value={15}>15 Years</option>
+                    <option value={20}>20 Years</option>
+                    <option value={25}>25 Years</option>
+                    <option value={30}>30 Years</option>
+                  </select>
+                </div>
+
+                <div>
+                  <div style={{ fontSize: '12px', color: '#A0988A', marginBottom: '6px' }}>Interest Rate (%):</div>
+                  <input
+                    type="number"
+                    step="0.1"
+                    value={interestRate}
+                    onChange={(e) => setInterestRate(Number(e.target.value))}
+                    style={{ width: '100%', backgroundColor: '#15120E', border: '1px solid rgba(200,164,100,0.3)', color: '#FFFFFF', padding: '10px', borderRadius: '4px', fontSize: '13px' }}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Calculated Monthly EMI Result Box */}
+            <div style={{
+              backgroundColor: '#15120E',
+              border: '1px solid #C8A464',
+              borderRadius: '6px',
+              padding: '28px',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: '11px', color: '#A0988A', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
+                ESTIMATED MONTHLY INSTALLMENT
+              </div>
+
+              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '36px', fontWeight: '800', color: '#C8A464', marginBottom: '8px' }}>
+                ₹ {monthlyEMI.toLocaleString('en-IN')} <span style={{ fontSize: '14px', color: '#FFFFFF' }}>/ Month</span>
+              </div>
+
+              <div style={{ fontSize: '12px', color: '#B0A89C', marginBottom: '20px' }}>
+                Loan Amount: ₹ {(loanAmount / 10000000).toFixed(2)} Cr • Down Payment: ₹ {(downPaymentVal / 100000).toFixed(2)} L
+              </div>
+
+              <button
+                onClick={onOpenSiteVisit}
+                style={{
+                  width: '100%',
+                  padding: '14px',
+                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
+                  color: '#0D0B09',
+                  border: 'none',
+                  fontWeight: '800',
+                  fontSize: '12px',
+                  textTransform: 'uppercase',
+                  borderRadius: '3px',
+                  cursor: 'pointer'
+                }}
+              >
+                Apply for Bank Subvention Plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
