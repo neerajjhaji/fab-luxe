@@ -6,16 +6,16 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
   return (
     <section id="buyer-journey" style={{
       width: '100%',
-      backgroundColor: '#15120E',
+      backgroundColor: '#FAF7F2',
       padding: '100px 4vw',
-      color: '#FFFFFF',
+      color: '#1A1815',
       boxSizing: 'border-box'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <div style={{
             fontSize: '12px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             letterSpacing: '2.5px',
             fontWeight: '600',
@@ -26,12 +26,12 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 'clamp(32px, 4vw, 48px)',
-            fontWeight: '400',
-            color: '#FFFFFF'
+            fontWeight: '700',
+            color: '#1A1815'
           }}>
             The 4-Step Forbes Buyer Journey
           </h2>
-          <p style={{ fontSize: '15px', color: '#B0A89C', maxWidth: '640px', margin: '12px auto 0' }}>
+          <p style={{ fontSize: '15px', color: '#5E574F', maxWidth: '640px', margin: '12px auto 0' }}>
             From your initial private consultation to key handover, experience absolute transparency and white-glove executive care.
           </p>
         </div>
@@ -45,23 +45,26 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
             <div
               key={idx}
               style={{
-                backgroundColor: '#0D0B09',
-                border: '1px solid rgba(200, 164, 100, 0.2)',
-                borderRadius: '4px',
+                backgroundColor: '#FFFFFF',
+                border: '1px solid rgba(166, 129, 66, 0.2)',
+                borderRadius: '6px',
                 padding: '32px 24px',
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                transition: 'all 0.3s'
+                boxShadow: '0 4px 16px rgba(0,0,0,0.03)',
+                transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#C8A464';
+                e.currentTarget.style.borderColor = '#A68142';
                 e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 12px 28px rgba(166, 129, 66, 0.15)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(200, 164, 100, 0.2)';
+                e.currentTarget.style.borderColor = 'rgba(166, 129, 66, 0.2)';
                 e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 16px rgba(0,0,0,0.03)';
               }}
             >
               <div>
@@ -69,20 +72,20 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
                   fontSize: '36px',
                   fontFamily: "'Cormorant Garamond', serif",
                   fontWeight: '700',
-                  color: '#C8A464',
+                  color: '#A68142',
                   marginBottom: '14px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between'
                 }}>
                   <span>{step.step}</span>
-                  <div style={{ width: '32px', height: '1px', background: 'rgba(200,164,100,0.3)' }} />
+                  <div style={{ width: '32px', height: '1px', background: 'rgba(166, 129, 66, 0.3)' }} />
                 </div>
 
                 <h3 style={{
                   fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#FFFFFF',
+                  fontWeight: '700',
+                  color: '#1A1815',
                   marginBottom: '10px',
                   lineHeight: '1.3'
                 }}>
@@ -91,7 +94,7 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
 
                 <p style={{
                   fontSize: '13px',
-                  color: '#A0988A',
+                  color: '#5E574F',
                   lineHeight: '1.6'
                 }}>
                   {step.desc}
@@ -104,21 +107,22 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
         {/* CTA Banner */}
         <div style={{
           marginTop: '50px',
-          backgroundColor: '#0D0B09',
-          border: '1px solid #C8A464',
-          borderRadius: '4px',
+          backgroundColor: '#FFFFFF',
+          border: '2px solid #A68142',
+          borderRadius: '8px',
           padding: '32px 40px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
           flexWrap: 'wrap',
-          gap: '20px'
+          gap: '20px',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.04)'
         }}>
           <div>
-            <div style={{ fontSize: '22px', fontFamily: "'Cormorant Garamond', serif", color: '#FFFFFF', fontWeight: '600' }}>
+            <div style={{ fontSize: '22px', fontFamily: "'Cormorant Garamond', serif", color: '#1A1815', fontWeight: '700' }}>
               Ready to Begin Your Private Journey?
             </div>
-            <div style={{ fontSize: '14px', color: '#B0A89C', marginTop: '4px' }}>
+            <div style={{ fontSize: '14px', color: '#5E574F', marginTop: '4px' }}>
               Request a private chauffeur pickup & guided site visit to Sector 4, Greater Noida West.
             </div>
           </div>
@@ -127,41 +131,37 @@ export default function BuyerJourneySteps({ onOpenSiteVisit, onOpenConcierge }) 
             <button
               onClick={onOpenSiteVisit}
               style={{
-                background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                color: '#0D0B09',
+                backgroundColor: '#A68142',
+                color: '#FFFFFF',
                 border: 'none',
                 padding: '14px 28px',
                 fontWeight: '700',
                 fontSize: '12px',
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
-                borderRadius: '2px',
+                borderRadius: '3px',
                 cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px'
+                boxShadow: '0 4px 12px rgba(166, 129, 66, 0.25)'
               }}
             >
-              <Calendar size={16} />
-              <span>Request VIP Visit</span>
+              Book VIP Visit
             </button>
-
             <button
               onClick={onOpenConcierge}
               style={{
-                background: 'transparent',
-                border: '1px solid #C8A464',
-                color: '#C8A464',
-                padding: '14px 24px',
-                fontWeight: '600',
+                backgroundColor: '#FAF7F2',
+                border: '1px solid #A68142',
+                color: '#A68142',
+                padding: '14px 28px',
+                fontWeight: '700',
                 fontSize: '12px',
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
-                borderRadius: '2px',
+                borderRadius: '3px',
                 cursor: 'pointer'
               }}
             >
-              Request Call Back
+              Speak with Concierge
             </button>
           </div>
         </div>

@@ -16,15 +16,15 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
 
   return (
     <footer style={{
-      backgroundColor: '#050403',
-      color: '#D8D0C5',
-      borderTop: '1px solid rgba(200, 164, 100, 0.25)',
+      backgroundColor: '#1A1815',
+      color: '#FAF7F2',
+      borderTop: '1px solid rgba(166, 129, 66, 0.25)',
       fontFamily: 'Inter, sans-serif',
       fontSize: '12px'
     }}>
       {/* Top Footer Banner */}
       <div style={{
-        borderBottom: '1px solid rgba(200, 164, 100, 0.15)',
+        borderBottom: '1px solid rgba(166, 129, 66, 0.2)',
         padding: '40px 4vw'
       }}>
         <div style={{
@@ -41,14 +41,14 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '28px',
               fontWeight: '700',
-              color: '#F5F2EC',
+              color: '#FFFFFF',
               letterSpacing: '2px',
               textTransform: 'uppercase',
               display: 'block'
             }}>
-              FORBES <span style={{ color: '#C8A464' }}>FAB LUXE</span> RESIDENCES
+              FORBES <span style={{ color: '#A68142' }}>FAB LUXE</span> RESIDENCES
             </span>
-            <span style={{ color: '#B0A89C', fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+            <span style={{ color: '#A68142', fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '700' }}>
               SECTOR 4, GREATER NOIDA WEST • RERA NO: {FAB_LUXE_PROJECT_DETAILS.reraNo}
             </span>
           </div>
@@ -58,8 +58,8 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
               onClick={onOpenSiteMap}
               style={{
                 backgroundColor: 'transparent',
-                border: '1px solid #C8A464',
-                color: '#C8A464',
+                border: '1px solid #A68142',
+                color: '#A68142',
                 padding: '10px 20px',
                 fontSize: '11px',
                 fontWeight: '700',
@@ -68,7 +68,8 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '6px'
+                gap: '6px',
+                borderRadius: '4px'
               }}
             >
               <Map size={14} />
@@ -78,15 +79,17 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
             <button
               onClick={onOpenSiteVisit}
               style={{
-                backgroundColor: '#C8A464',
-                color: '#070605',
+                backgroundColor: '#A68142',
+                color: '#FFFFFF',
                 border: 'none',
                 padding: '10px 20px',
                 fontSize: '11px',
                 fontWeight: '700',
                 letterSpacing: '1px',
                 textTransform: 'uppercase',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                borderRadius: '4px',
+                boxShadow: '0 4px 12px rgba(166, 129, 66, 0.3)'
               }}
             >
               BOOK SITE VISIT
@@ -96,7 +99,7 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
       </div>
 
       {/* Categorized Sitemap Index */}
-      <div style={{ padding: '60px 4vw', borderBottom: '1px solid rgba(200, 164, 100, 0.15)' }}>
+      <div style={{ padding: '60px 4vw', borderBottom: '1px solid rgba(166, 129, 66, 0.2)' }}>
         <div style={{
           maxWidth: '1600px',
           margin: '0 auto',
@@ -110,17 +113,17 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '18px',
               fontWeight: '700',
-              color: '#C8A464',
+              color: '#A68142',
               marginBottom: '16px',
               textTransform: 'uppercase',
               letterSpacing: '1px'
             }}>
               RESIDENTIAL TYPOLOGIES
             </h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', color: '#B0A89C' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', color: '#FAF7F2' }}>
               <li><a onClick={onOpenFloorPlan} style={{ cursor: 'pointer' }}>3+1 BHK Sky Residences (2,250 – 2,650 Sq.Ft.)</a></li>
               <li><a onClick={onOpenFloorPlan} style={{ cursor: 'pointer' }}>4+1 BHK Grand Penthouses (3,150 – 3,850 Sq.Ft.)</a></li>
-              <li><a onClick={onOpenSiteMap} style={{ cursor: 'pointer', color: '#C8A464', fontWeight: '600' }}>🗺️ View Master Site Layout Plan</a></li>
+              <li><a onClick={onOpenSiteMap} style={{ cursor: 'pointer', color: '#A68142', fontWeight: '600' }}>🗺️ View Master Site Layout Plan</a></li>
             </ul>
           </div>
 
@@ -130,14 +133,14 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '18px',
               fontWeight: '700',
-              color: '#C8A464',
+              color: '#A68142',
               marginBottom: '16px',
               textTransform: 'uppercase',
               letterSpacing: '1px'
             }}>
               75,000 SQ.FT. CLUBHOUSE
             </h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', color: '#B0A89C' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', color: '#FAF7F2' }}>
               <li>Temperature-Controlled Resort Pool</li>
               <li>World-Class Sports Academy</li>
               <li>Wellness Spa & Olympic Gym</li>
@@ -151,19 +154,19 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '18px',
               fontWeight: '700',
-              color: '#C8A464',
+              color: '#A68142',
               marginBottom: '16px',
               textTransform: 'uppercase',
               letterSpacing: '1px'
             }}>
               CONNECTIVITY ADVANTAGES
             </h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', color: '#B0A89C' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px', color: '#FAF7F2' }}>
               <li><a onClick={() => scrollToSection('location')} style={{ cursor: 'pointer' }}>Delhi-Meerut Expressway — 5 mins</a></li>
               <li><a onClick={() => scrollToSection('location')} style={{ cursor: 'pointer' }}>Delhi-Meerut RRTS — 10 mins</a></li>
               <li><a onClick={() => scrollToSection('location')} style={{ cursor: 'pointer' }}>Hindon River Metro — 15 mins</a></li>
               <li><a onClick={() => scrollToSection('location')} style={{ cursor: 'pointer' }}>Noida Sector 62 Hub — 15 mins</a></li>
-              <li><a onClick={() => scrollToSection('location')} style={{ cursor: 'pointer', color: '#C8A464', fontWeight: '600' }}>📍 Explore Live GPS Map & Distances</a></li>
+              <li><a onClick={() => scrollToSection('location')} style={{ cursor: 'pointer', color: '#A68142', fontWeight: '600' }}>📍 Explore Live GPS Map & Distances</a></li>
             </ul>
           </div>
 
@@ -173,24 +176,24 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
               fontFamily: 'Cormorant Garamond, serif',
               fontSize: '18px',
               fontWeight: '700',
-              color: '#C8A464',
+              color: '#A68142',
               marginBottom: '16px',
               textTransform: 'uppercase',
               letterSpacing: '1px'
             }}>
               OFFICIAL CONTACT
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: '#B0A89C' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', color: '#FAF7F2' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Phone size={14} style={{ color: '#C8A464' }} />
+                <Phone size={14} style={{ color: '#A68142' }} />
                 <span>Helpline: {FAB_LUXE_PROJECT_DETAILS.helpline}</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <MapPin size={14} style={{ color: '#C8A464' }} />
+                <MapPin size={14} style={{ color: '#A68142' }} />
                 <span>Sector 4, Greater Noida West, UP</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <ShieldCheck size={14} style={{ color: '#C8A464' }} />
+                <ShieldCheck size={14} style={{ color: '#A68142' }} />
                 <span>UPRERA: UPRERAPRJ995490</span>
               </div>
             </div>
@@ -199,7 +202,7 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
       </div>
 
       {/* Bottom Legal Disclaimer & Back To Top */}
-      <div style={{ padding: '30px 4vw', backgroundColor: '#030202', color: '#80786C', fontSize: '11px', lineHeight: '1.6' }}>
+      <div style={{ padding: '30px 4vw', backgroundColor: '#110F0D', color: '#8A8275', fontSize: '11px', lineHeight: '1.6' }}>
         <div style={{ maxWidth: '1600px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '20px' }}>
           <div style={{ maxWidth: '900px' }}>
             <p style={{ margin: '0 0 8px' }}>
@@ -213,9 +216,9 @@ export default function Footer({ onOpenSiteVisit, _onOpenBrochure, onOpenFloorPl
           <button
             onClick={scrollToTop}
             style={{
-              backgroundColor: 'rgba(200, 164, 100, 0.1)',
-              border: '1px solid #C8A464',
-              color: '#C8A464',
+              backgroundColor: '#FAF7F2',
+              border: '1px solid #A68142',
+              color: '#A68142',
               padding: '8px 14px',
               fontSize: '11px',
               fontWeight: '600',
