@@ -90,7 +90,7 @@ export default function SiteMapModal({ isOpen, onClose, onOpenSiteVisit, onOpenB
               boxShadow: '0 10px 30px rgba(166, 129, 66, 0.15)'
             }}>
               <img
-                src="/images/1.png"
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
                 alt="Forbes Fab Luxe Master Site Plan"
                 style={{ width: '100%', height: 'auto', display: 'block', opacity: 0.95 }}
               />
