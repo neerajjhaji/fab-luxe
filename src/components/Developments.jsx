@@ -5,10 +5,10 @@ import { TYPOLOGIES } from '../data/projectsData';
 export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
   return (
     <section id="developments" style={{
-      backgroundColor: '#0A0907',
-      color: '#F5F2EC',
+      backgroundColor: '#FAF8F5',
+      color: '#1A1815',
       padding: '100px 4vw',
-      borderBottom: '1px solid rgba(200, 164, 100, 0.15)'
+      borderBottom: '1px solid rgba(166, 129, 66, 0.15)'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
 
@@ -19,7 +19,7 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
             fontSize: '12px',
             fontWeight: '700',
             letterSpacing: '3px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             display: 'block',
             marginBottom: '10px'
@@ -31,14 +31,14 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
             fontSize: 'clamp(32px, 4vw, 52px)',
             fontWeight: '700',
             lineHeight: '1.15',
-            color: '#F5F2EC'
+            color: '#1A1815'
           }}>
-            The Flagship <span style={{ color: '#C8A464', fontStyle: 'italic' }}>Residences Collection</span>
+            The Flagship <span style={{ color: '#A68142', fontStyle: 'italic' }}>Residences Collection</span>
           </h2>
           <p style={{
             fontFamily: 'Inter, sans-serif',
             fontSize: '15px',
-            color: '#B0A89C',
+            color: '#5E574F',
             marginTop: '12px',
             maxWidth: '700px',
             margin: '12px auto 0'
@@ -57,13 +57,13 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
             const featureList = typo.highlights || typo.features || [];
             return (
               <div key={typo.id} style={{
-                backgroundColor: '#110F0C',
-                border: '1px solid rgba(200, 164, 100, 0.2)',
-                borderRadius: '2px',
+                backgroundColor: '#FFFFFF',
+                border: '1px solid rgba(166, 129, 66, 0.25)',
+                borderRadius: '4px',
                 overflow: 'hidden',
                 display: 'flex',
                 flexDirection: 'column',
-                boxShadow: '0 12px 40px rgba(0,0,0,0.5)',
+                boxShadow: '0 12px 36px rgba(0,0,0,0.06)',
                 transition: 'transform 0.3s, border-color 0.3s'
               }}>
                 {/* Image Container with Badges */}
@@ -82,14 +82,15 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                     position: 'absolute',
                     top: '16px',
                     left: '16px',
-                    backgroundColor: 'rgba(8, 7, 5, 0.85)',
-                    border: '1px solid #C8A464',
+                    backgroundColor: 'rgba(255, 255, 255, 0.92)',
+                    border: '1px solid #A68142',
                     padding: '4px 12px',
                     fontSize: '11px',
                     fontWeight: '700',
-                    color: '#C8A464',
+                    color: '#A68142',
                     letterSpacing: '1px',
-                    textTransform: 'uppercase'
+                    textTransform: 'uppercase',
+                    backdropFilter: 'blur(6px)'
                   }}>
                     {typo.superArea || typo.size}
                   </div>
@@ -98,8 +99,8 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                     position: 'absolute',
                     bottom: '16px',
                     right: '16px',
-                    backgroundColor: '#C8A464',
-                    color: '#070605',
+                    backgroundColor: '#A68142',
+                    color: '#FFFFFF',
                     padding: '6px 14px',
                     fontSize: '13px',
                     fontWeight: '700',
@@ -114,7 +115,7 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                   <div style={{
                     fontSize: '11px',
                     fontWeight: '700',
-                    color: '#C8A464',
+                    color: '#A68142',
                     letterSpacing: '1.5px',
                     textTransform: 'uppercase',
                     marginBottom: '6px'
@@ -126,7 +127,7 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                     fontFamily: 'Cormorant Garamond, serif',
                     fontSize: '28px',
                     fontWeight: '700',
-                    color: '#F5F2EC',
+                    color: '#1A1815',
                     margin: '0 0 12px'
                   }}>
                     {typo.title || typo.name}
@@ -135,7 +136,7 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                   <p style={{
                     fontFamily: 'Inter, sans-serif',
                     fontSize: '13px',
-                    color: '#B0A89C',
+                    color: '#5E574F',
                     lineHeight: '1.6',
                     marginBottom: '20px'
                   }}>
@@ -148,12 +149,12 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                     flexDirection: 'column',
                     gap: '8px',
                     marginBottom: '24px',
-                    borderTop: '1px solid rgba(200, 164, 100, 0.15)',
+                    borderTop: '1px solid rgba(166, 129, 66, 0.15)',
                     paddingTop: '16px'
                   }}>
                     {featureList.map((feat, i) => (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#D8D0C5' }}>
-                        <CheckCircle2 size={14} style={{ color: '#C8A464', flexShrink: 0 }} />
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: '#2D2821' }}>
+                        <CheckCircle2 size={14} style={{ color: '#A68142', flexShrink: 0 }} />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -166,8 +167,8 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                       style={{
                         flex: 1,
                         backgroundColor: 'transparent',
-                        border: '1px solid #C8A464',
-                        color: '#C8A464',
+                        border: '1px solid #A68142',
+                        color: '#A68142',
                         padding: '10px',
                         fontSize: '11px',
                         fontWeight: '700',
@@ -188,8 +189,8 @@ export default function Developments({ onOpenSiteVisit, onOpenFloorPlan }) {
                       onClick={onOpenSiteVisit}
                       style={{
                         flex: 1,
-                        backgroundColor: '#C8A464',
-                        color: '#070605',
+                        backgroundColor: '#A68142',
+                        color: '#FFFFFF',
                         border: 'none',
                         padding: '10px',
                         fontSize: '11px',

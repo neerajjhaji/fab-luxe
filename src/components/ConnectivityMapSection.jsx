@@ -28,10 +28,10 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
   return (
     <section id="location" style={{
       width: '100%',
-      backgroundColor: '#0A0806',
+      backgroundColor: '#FAF8F5',
       padding: '90px 4vw',
-      color: '#FFFFFF',
-      borderTop: '1px solid rgba(200, 164, 100, 0.25)',
+      color: '#1A1815',
+      borderTop: '1px solid rgba(166, 129, 66, 0.25)',
       boxSizing: 'border-box'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
@@ -39,7 +39,7 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <div style={{
             fontSize: '12px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             letterSpacing: '3px',
             fontWeight: '700',
@@ -56,11 +56,11 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
             fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif",
             fontSize: 'clamp(32px, 4vw, 50px)',
             fontWeight: '700',
-            color: '#FFFFFF'
+            color: '#1A1815'
           }}>
             Sector 4, Greater Noida West — The Prime Gold Corridor
           </h2>
-          <p style={{ fontSize: '15px', color: '#B0A89C', maxWidth: '750px', margin: '12px auto 0', lineHeight: '1.6' }}>
+          <p style={{ fontSize: '15px', color: '#5E574F', maxWidth: '750px', margin: '12px auto 0', lineHeight: '1.6' }}>
             Enjoy unparalleled multi-modal connectivity via 14-lane expressways, RRTS bullet transit, metro corridors, and dual international airport access points.
           </p>
         </div>
@@ -75,25 +75,25 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
         }}>
           {/* Left Column: Embed Google Map Container */}
           <div style={{
-            backgroundColor: '#15120E',
-            border: '1px solid #C8A464',
+            backgroundColor: '#FFFFFF',
+            border: '1px solid #A68142',
             borderRadius: '8px',
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.6)'
+            boxShadow: '0 8px 24px rgba(0,0,0,0.04)'
           }}>
             <div style={{
-              backgroundColor: '#0D0B09',
+              backgroundColor: '#FAF7F2',
               padding: '16px 24px',
-              borderBottom: '1px solid rgba(200, 164, 100, 0.2)',
+              borderBottom: '1px solid rgba(166, 129, 66, 0.2)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <Compass size={18} style={{ color: '#C8A464' }} />
-                <span style={{ fontSize: '13px', fontWeight: '700', color: '#FFFFFF', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                <Compass size={18} style={{ color: '#A68142' }} />
+                <span style={{ fontSize: '13px', fontWeight: '700', color: '#1A1815', letterSpacing: '1px', textTransform: 'uppercase' }}>
                   Live Sector 4 GPS Map
                 </span>
               </div>
@@ -102,7 +102,7 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  color: '#C8A464',
+                  color: '#A68142',
                   fontSize: '11px',
                   fontWeight: '700',
                   textDecoration: 'none',
@@ -133,8 +133,8 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
             {/* Quick Map Bar */}
             <div style={{
               padding: '20px 24px',
-              backgroundColor: '#0D0B09',
-              borderTop: '1px solid rgba(200, 164, 100, 0.2)',
+              backgroundColor: '#FAF7F2',
+              borderTop: '1px solid rgba(166, 129, 66, 0.2)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
@@ -142,10 +142,10 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
               gap: '12px'
             }}>
               <div>
-                <div style={{ fontSize: '11px', color: '#C8A464', fontWeight: '700', textTransform: 'uppercase' }}>
+                <div style={{ fontSize: '11px', color: '#A68142', fontWeight: '700', textTransform: 'uppercase' }}>
                   GPS COORDINATES & ADDRESS
                 </div>
-                <div style={{ fontSize: '13px', color: '#FFFFFF', marginTop: '2px' }}>
+                <div style={{ fontSize: '13px', color: '#1A1815', marginTop: '2px' }}>
                   Sector 4, Greater Noida West, Uttar Pradesh 201306
                 </div>
               </div>
@@ -154,15 +154,16 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
                 onClick={onOpenSiteVisit}
                 style={{
                   padding: '10px 18px',
-                  backgroundColor: '#C8A464',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '700',
                   fontSize: '11px',
                   textTransform: 'uppercase',
                   letterSpacing: '1px',
                   borderRadius: '3px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 12px rgba(166, 129, 66, 0.25)'
                 }}
               >
                 REQUEST CAB PICKUP FOR VISIT
@@ -172,16 +173,17 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
 
           {/* Right Column: Interactive Destination Tabs & List */}
           <div style={{
-            backgroundColor: '#15120E',
-            border: '1px solid rgba(200, 164, 100, 0.3)',
+            backgroundColor: '#FFFFFF',
+            border: '1px solid rgba(166, 129, 66, 0.3)',
             borderRadius: '8px',
             padding: '28px',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.04)'
           }}>
             <div>
-              <div style={{ fontSize: '12px', color: '#C8A464', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '16px' }}>
+              <div style={{ fontSize: '12px', color: '#A68142', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '16px' }}>
                 FILTER DESTINATION RADIUS
               </div>
 
@@ -206,9 +208,9 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
                       textTransform: 'uppercase',
                       letterSpacing: '0.5px',
                       cursor: 'pointer',
-                      border: activeCategory === cat.id ? '1px solid #C8A464' : '1px solid rgba(200,164,100,0.15)',
-                      backgroundColor: activeCategory === cat.id ? '#C8A464' : '#0D0B09',
-                      color: activeCategory === cat.id ? '#0D0B09' : '#C8A464',
+                      border: activeCategory === cat.id ? '1px solid #A68142' : '1px solid rgba(166,129,66,0.2)',
+                      backgroundColor: activeCategory === cat.id ? '#A68142' : '#FAF7F2',
+                      color: activeCategory === cat.id ? '#FFFFFF' : '#A68142',
                       transition: 'all 0.2s'
                     }}
                   >
@@ -221,8 +223,8 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
               <div style={{ display: 'grid', gap: '14px', maxHeight: '360px', overflowY: 'auto', paddingRight: '6px' }}>
                 {filteredLandmarks.map((item, idx) => (
                   <div key={idx} style={{
-                    backgroundColor: '#0D0B09',
-                    border: '1px solid rgba(200, 164, 100, 0.2)',
+                    backgroundColor: '#FAF7F2',
+                    border: '1px solid rgba(166, 129, 66, 0.2)',
                     borderRadius: '6px',
                     padding: '16px',
                     display: 'flex',
@@ -231,19 +233,19 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
                     gap: '12px'
                   }}>
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: '700', color: '#FFFFFF', marginBottom: '4px' }}>
+                      <div style={{ fontSize: '14px', fontWeight: '700', color: '#1A1815', marginBottom: '4px' }}>
                         {item.name}
                       </div>
-                      <div style={{ fontSize: '12px', color: '#A0988A', lineHeight: '1.4' }}>
+                      <div style={{ fontSize: '12px', color: '#5E574F', lineHeight: '1.4' }}>
                         {item.detail}
                       </div>
                     </div>
 
                     <div style={{ textAlign: 'right', minWidth: '80px' }}>
-                      <div style={{ fontSize: '14px', fontWeight: '800', color: '#C8A464' }}>
+                      <div style={{ fontSize: '14px', fontWeight: '800', color: '#A68142' }}>
                         {item.time}
                       </div>
-                      <div style={{ fontSize: '11px', color: '#80786C' }}>
+                      <div style={{ fontSize: '11px', color: '#8A8275' }}>
                         {item.dist}
                       </div>
                     </div>
@@ -253,20 +255,21 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
             </div>
 
             {/* Bottom Enquire Action */}
-            <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid rgba(200,164,100,0.2)', display: 'flex', gap: '12px' }}>
+            <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid rgba(166,129,66,0.2)', display: 'flex', gap: '12px' }}>
               <button
                 onClick={onOpenSiteVisit}
                 style={{
                   flex: 1,
                   padding: '12px',
-                  backgroundColor: '#C8A464',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '700',
                   fontSize: '11px',
                   textTransform: 'uppercase',
                   borderRadius: '3px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 12px rgba(166, 129, 66, 0.25)'
                 }}
               >
                 SCHEDULE LOCATION TOUR
@@ -275,9 +278,9 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
                 onClick={onOpenConcierge}
                 style={{
                   padding: '12px 20px',
-                  backgroundColor: 'transparent',
-                  border: '1px solid #C8A464',
-                  color: '#C8A464',
+                  backgroundColor: '#FAF7F2',
+                  border: '1px solid #A68142',
+                  color: '#A68142',
                   fontWeight: '700',
                   fontSize: '11px',
                   textTransform: 'uppercase',
@@ -299,19 +302,20 @@ export default function ConnectivityMapSection({ onOpenSiteVisit, onOpenConcierg
         }}>
           {CONNECTIVITY_POINTS.map((cp, idx) => (
             <div key={idx} style={{
-              backgroundColor: '#15120E',
-              border: '1px solid rgba(200, 164, 100, 0.25)',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(166, 129, 66, 0.25)',
               padding: '20px',
               borderRadius: '6px',
-              textAlign: 'center'
+              textAlign: 'center',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.03)'
             }}>
-              <div style={{ fontSize: '24px', fontWeight: '800', color: '#C8A464', fontFamily: "'Outfit', sans-serif" }}>
+              <div style={{ fontSize: '24px', fontWeight: '800', color: '#A68142', fontFamily: "'Outfit', sans-serif" }}>
                 {cp.time}
               </div>
-              <div style={{ fontSize: '13px', fontWeight: '700', color: '#FFFFFF', margin: '4px 0 2px' }}>
+              <div style={{ fontSize: '13px', fontWeight: '700', color: '#1A1815', margin: '4px 0 2px' }}>
                 {cp.name}
               </div>
-              <div style={{ fontSize: '11px', color: '#A0988A' }}>
+              <div style={{ fontSize: '11px', color: '#5E574F' }}>
                 Distance: {cp.distance}
               </div>
             </div>

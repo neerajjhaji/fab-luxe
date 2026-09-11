@@ -114,10 +114,10 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
   return (
     <section id="amenities" style={{
       width: '100%',
-      backgroundColor: '#0A0806',
+      backgroundColor: '#FAF7F2',
       padding: '100px 4vw',
-      color: '#FFFFFF',
-      borderTop: '1px solid rgba(200, 164, 100, 0.25)',
+      color: '#1A1815',
+      borderTop: '1px solid rgba(166, 129, 66, 0.2)',
       boxSizing: 'border-box'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
@@ -125,7 +125,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
         <div style={{ textAlign: 'center', marginBottom: '50px' }}>
           <div style={{
             fontSize: '12px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             letterSpacing: '3px',
             fontWeight: '800',
@@ -142,11 +142,11 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
             fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif",
             fontSize: 'clamp(32px, 4vw, 52px)',
             fontWeight: '700',
-            color: '#FFFFFF'
+            color: '#1A1815'
           }}>
             Unrivaled Resort Living & Hospitality Privileges
           </h2>
-          <p style={{ fontSize: '15px', color: '#B0A89C', maxWidth: '750px', margin: '12px auto 0', lineHeight: '1.6' }}>
+          <p style={{ fontSize: '15px', color: '#5E574F', maxWidth: '750px', margin: '12px auto 0', lineHeight: '1.6' }}>
             Immerse yourself in a 13-acre resort ecosystem featuring 70% open green reserves, Olympic aqua pools, biophilic oxygen zones, and 24/7 Forbes Global Concierge.
           </p>
         </div>
@@ -171,11 +171,11 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                 textTransform: 'uppercase',
                 letterSpacing: '1px',
                 cursor: 'pointer',
-                border: activeCategory === cat.id ? '1px solid #C8A464' : '1px solid rgba(200,164,100,0.2)',
-                backgroundColor: activeCategory === cat.id ? '#C8A464' : '#15120E',
-                color: activeCategory === cat.id ? '#0D0B09' : '#C8A464',
+                border: activeCategory === cat.id ? '1px solid #A68142' : '1px solid rgba(166,129,66,0.2)',
+                backgroundColor: activeCategory === cat.id ? '#A68142' : '#FFFFFF',
+                color: activeCategory === cat.id ? '#FFFFFF' : '#A68142',
                 transition: 'all 0.25s ease',
-                boxShadow: activeCategory === cat.id ? '0 4px 20px rgba(200, 164, 100, 0.3)' : 'none'
+                boxShadow: activeCategory === cat.id ? '0 4px 20px rgba(166, 129, 66, 0.3)' : '0 2px 10px rgba(0,0,0,0.04)'
               }}
             >
               {cat.label}
@@ -196,25 +196,26 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                 key={item.id}
                 onClick={() => setSelectedAmenity(item)}
                 style={{
-                  backgroundColor: '#15120E',
-                  border: '1px solid rgba(200, 164, 100, 0.25)',
+                  backgroundColor: '#FFFFFF',
+                  border: '1px solid rgba(166, 129, 66, 0.25)',
                   borderRadius: '6px',
                   overflow: 'hidden',
                   cursor: 'pointer',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.04)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = '#C8A464';
+                  e.currentTarget.style.borderColor = '#A68142';
                   e.currentTarget.style.transform = 'translateY(-6px)';
-                  e.currentTarget.style.boxShadow = '0 15px 35px rgba(200, 164, 100, 0.2)';
+                  e.currentTarget.style.boxShadow = '0 16px 36px rgba(166, 129, 66, 0.15)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(200, 164, 100, 0.25)';
+                  e.currentTarget.style.borderColor = 'rgba(166, 129, 66, 0.25)';
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.04)';
                 }}
               >
                 <div>
@@ -229,12 +230,12 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                       position: 'absolute',
                       top: '14px',
                       left: '14px',
-                      backgroundColor: 'rgba(13, 11, 9, 0.85)',
-                      border: '1px solid #C8A464',
+                      backgroundColor: 'rgba(255, 255, 255, 0.92)',
+                      border: '1px solid #A68142',
                       padding: '4px 10px',
                       fontSize: '10px',
                       fontWeight: '800',
-                      color: '#C8A464',
+                      color: '#A68142',
                       borderRadius: '3px',
                       textTransform: 'uppercase',
                       letterSpacing: '1px',
@@ -253,12 +254,12 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                       fontFamily: "'Outfit', 'Cormorant Garamond', serif",
                       fontSize: '22px',
                       fontWeight: '700',
-                      color: '#FFFFFF',
+                      color: '#1A1815',
                       marginBottom: '10px'
                     }}>
                       {item.title}
                     </h3>
-                    <p style={{ fontSize: '13px', color: '#A0988A', lineHeight: '1.6', marginBottom: '16px' }}>
+                    <p style={{ fontSize: '13px', color: '#5E574F', lineHeight: '1.6', marginBottom: '16px' }}>
                       {item.shortDesc}
                     </p>
                   </div>
@@ -266,10 +267,10 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
 
                 {/* Footer Action */}
                 <div style={{ padding: '0 24px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontSize: '11px', color: '#C8A464', fontWeight: '700', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                  <span style={{ fontSize: '11px', color: '#A68142', fontWeight: '700', letterSpacing: '1px', textTransform: 'uppercase' }}>
                     EXPLORE FULL SPECS
                   </span>
-                  <ChevronRight size={16} style={{ color: '#C8A464' }} />
+                  <ChevronRight size={16} style={{ color: '#A68142' }} />
                 </div>
               </div>
             );
@@ -282,7 +283,7 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
             position: 'fixed',
             inset: 0,
             zIndex: 9999,
-            backgroundColor: 'rgba(5, 4, 3, 0.94)',
+            backgroundColor: 'rgba(26, 24, 21, 0.75)',
             backdropFilter: 'blur(16px)',
             display: 'flex',
             alignItems: 'center',
@@ -291,27 +292,27 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
             boxSizing: 'border-box'
           }}>
             <div style={{
-              backgroundColor: '#0D0B09',
-              border: '2px solid #C8A464',
+              backgroundColor: '#FFFFFF',
+              border: '2px solid #A68142',
               borderRadius: '8px',
               width: '100%',
               maxWidth: '850px',
               maxHeight: '90vh',
               overflowY: 'auto',
-              color: '#FFFFFF',
+              color: '#1A1815',
               padding: '32px',
-              boxShadow: '0 25px 60px rgba(0,0,0,0.95)'
+              boxShadow: '0 25px 60px rgba(0,0,0,0.2)'
             }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <div style={{ fontSize: '11px', color: '#C8A464', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px' }}>
+                <div style={{ fontSize: '11px', color: '#A68142', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px' }}>
                   FEATURE SPECIFICATION • {selectedAmenity.categoryLabel}
                 </div>
                 <button
                   onClick={() => setSelectedAmenity(null)}
                   style={{
-                    backgroundColor: 'transparent',
-                    border: '1px solid #C8A464',
-                    color: '#C8A464',
+                    backgroundColor: '#FAF7F2',
+                    border: '1px solid #A68142',
+                    color: '#A68142',
                     padding: '6px',
                     borderRadius: '50%',
                     cursor: 'pointer'
@@ -327,22 +328,22 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '6px', marginBottom: '20px' }}
               />
 
-              <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '28px', color: '#FFFFFF', marginBottom: '10px' }}>
+              <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '28px', color: '#1A1815', marginBottom: '10px' }}>
                 {selectedAmenity.title}
               </h2>
 
-              <p style={{ fontSize: '14px', color: '#B0A89C', lineHeight: '1.6', marginBottom: '24px' }}>
+              <p style={{ fontSize: '14px', color: '#5E574F', lineHeight: '1.6', marginBottom: '24px' }}>
                 {selectedAmenity.shortDesc}
               </p>
 
-              <div style={{ borderTop: '1px solid rgba(200, 164, 100, 0.2)', paddingTop: '20px', marginBottom: '28px' }}>
-                <div style={{ fontSize: '12px', color: '#C8A464', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
+              <div style={{ borderTop: '1px solid rgba(166, 129, 66, 0.2)', paddingTop: '20px', marginBottom: '28px' }}>
+                <div style={{ fontSize: '12px', color: '#A68142', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '14px' }}>
                   HIGHLIGHT SPECIFICATIONS & INCLUSIONS
                 </div>
                 <div style={{ display: 'grid', gap: '10px' }}>
                   {selectedAmenity.fullSpecs.map((spec, i) => (
-                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', color: '#E0D8CC' }}>
-                      <CheckCircle size={15} style={{ color: '#C8A464', flexShrink: 0 }} />
+                    <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13px', color: '#1A1815' }}>
+                      <CheckCircle size={15} style={{ color: '#A68142', flexShrink: 0 }} />
                       <span>{spec}</span>
                     </div>
                   ))}
@@ -358,14 +359,15 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                   style={{
                     flex: 1,
                     padding: '14px',
-                    background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                    color: '#0D0B09',
+                    backgroundColor: '#A68142',
+                    color: '#FFFFFF',
                     border: 'none',
                     fontWeight: '800',
                     fontSize: '12px',
                     textTransform: 'uppercase',
                     borderRadius: '3px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 15px rgba(166, 129, 66, 0.3)'
                   }}
                 >
                   BOOK PRIVATE CLUBHOUSE TOUR
@@ -377,9 +379,9 @@ export default function AmenitiesSection({ onOpenSiteVisit, onOpenConcierge }) {
                   }}
                   style={{
                     padding: '14px 24px',
-                    backgroundColor: 'transparent',
-                    border: '1px solid #C8A464',
-                    color: '#C8A464',
+                    backgroundColor: '#FAF7F2',
+                    border: '1px solid #A68142',
+                    color: '#A68142',
                     fontWeight: '700',
                     fontSize: '12px',
                     textTransform: 'uppercase',

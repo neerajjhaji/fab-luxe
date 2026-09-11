@@ -39,7 +39,7 @@ export default function App() {
   const [virtualTourOpen, setVirtualTourOpen] = useState(false);
 
   return (
-    <div style={{ backgroundColor: '#0D0B09', color: '#FFFFFF', minHeight: '100vh', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+    <div style={{ backgroundColor: '#FAF8F5', color: '#1A1815', minHeight: '100vh', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       {/* Live Real-Time Buyer Signal Bar */}
       <LiveBuyerTicker
         onOpenSiteVisit={() => setSiteVisitOpen(true)}

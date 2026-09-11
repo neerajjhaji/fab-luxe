@@ -54,11 +54,12 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
       position: 'sticky',
       top: 0,
       zIndex: 99,
-      backgroundColor: scrolled ? 'rgba(8, 6, 5, 0.98)' : 'rgba(13, 11, 9, 0.92)',
+      backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(250, 248, 245, 0.95)',
       backdropFilter: 'blur(20px)',
-      borderBottom: '1px solid rgba(200, 164, 100, 0.2)',
+      borderBottom: '1px solid rgba(166, 129, 66, 0.2)',
       width: '100%',
       boxSizing: 'border-box',
+      boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.06)' : 'none',
       transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
     }}>
       <div style={{
@@ -81,30 +82,30 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
           style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px' }}
         >
           <div style={{
-            borderLeft: '2.5px solid #C8A464',
+            borderLeft: '3px solid #A68142',
             paddingLeft: '14px'
           }}>
             <span style={{
               fontFamily: "'Outfit', 'Cormorant Garamond', serif",
               fontSize: '22px',
-              fontWeight: '700',
-              color: '#F5F2EC',
+              fontWeight: '800',
+              color: '#1A1815',
               letterSpacing: '3px',
               textTransform: 'uppercase',
               display: 'block',
               lineHeight: '1.0'
             }}>
-              FORBES <span style={{ color: '#C8A464' }}>FAB LUXE</span>
+              FORBES <span style={{ color: '#A68142' }}>FAB LUXE</span>
             </span>
             <span style={{
               fontFamily: "'Plus Jakarta Sans', sans-serif",
               fontSize: '8px',
-              color: '#B0A89C',
+              color: '#6E675F',
               letterSpacing: '2.5px',
               textTransform: 'uppercase',
               marginTop: '4px',
               display: 'block',
-              fontWeight: '600'
+              fontWeight: '700'
             }}>
               RESIDENCES • SECTOR 4, GREATER NOIDA WEST
             </span>
@@ -131,15 +132,15 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
                 style={{
                   background: 'none',
                   border: 'none',
-                  color: isActive ? '#C8A464' : '#E0D8CC',
+                  color: isActive ? '#A68142' : '#2D2821',
                   cursor: 'pointer',
                   position: 'relative',
                   padding: '8px 0',
-                  fontWeight: isActive ? '700' : '500',
+                  fontWeight: isActive ? '700' : '600',
                   transition: 'color 0.25s ease'
                 }}
-                onMouseOver={(e) => e.currentTarget.style.color = '#C8A464'}
-                onMouseOut={(e) => e.currentTarget.style.color = isActive ? '#C8A464' : '#E0D8CC'}
+                onMouseOver={(e) => e.currentTarget.style.color = '#A68142'}
+                onMouseOut={(e) => e.currentTarget.style.color = isActive ? '#A68142' : '#2D2821'}
               >
                 <span>{link.label}</span>
                 {isActive && (
@@ -149,7 +150,7 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
                     left: 0,
                     right: 0,
                     height: '2px',
-                    backgroundColor: '#C8A464',
+                    backgroundColor: '#A68142',
                     borderRadius: '2px'
                   }} />
                 )}
@@ -163,14 +164,14 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
             style={{
               background: 'none',
               border: 'none',
-              color: '#E0D8CC',
+              color: '#2D2821',
               cursor: 'pointer',
               padding: '8px 0',
-              fontWeight: '500',
+              fontWeight: '600',
               transition: 'color 0.25s ease'
             }}
-            onMouseOver={(e) => e.currentTarget.style.color = '#C8A464'}
-            onMouseOut={(e) => e.currentTarget.style.color = '#E0D8CC'}
+            onMouseOver={(e) => e.currentTarget.style.color = '#A68142'}
+            onMouseOut={(e) => e.currentTarget.style.color = '#2D2821'}
           >
             FLOOR PLANS
           </button>
@@ -183,10 +184,10 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
             onClick={onOpenSearch}
             style={{
               background: 'none',
-              border: '1px solid rgba(200, 164, 100, 0.35)',
-              color: '#C8A464',
+              border: '1px solid rgba(166, 129, 66, 0.4)',
+              color: '#A68142',
               padding: '8px 14px',
-              borderRadius: '2px',
+              borderRadius: '3px',
               fontSize: '11px',
               fontWeight: '700',
               cursor: 'pointer',
@@ -196,11 +197,11 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
               transition: 'all 0.2s'
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.borderColor = '#C8A464';
-              e.currentTarget.style.backgroundColor = 'rgba(200, 164, 100, 0.1)';
+              e.currentTarget.style.borderColor = '#A68142';
+              e.currentTarget.style.backgroundColor = 'rgba(166, 129, 66, 0.08)';
             }}
             onMouseOut={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(200, 164, 100, 0.35)';
+              e.currentTarget.style.borderColor = 'rgba(166, 129, 66, 0.4)';
               e.currentTarget.style.backgroundColor = 'transparent';
             }}
             title="Search Residences"
@@ -214,8 +215,8 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
             onClick={onOpenSiteVisit}
             style={{
               backgroundColor: 'transparent',
-              border: '1px solid #C8A464',
-              color: '#C8A464',
+              border: '1px solid #A68142',
+              color: '#A68142',
               padding: '9px 18px',
               fontSize: '11px',
               fontWeight: '700',
@@ -228,12 +229,12 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
               gap: '6px'
             }}
             onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = '#C8A464';
-              e.currentTarget.style.color = '#000000';
+              e.currentTarget.style.backgroundColor = '#A68142';
+              e.currentTarget.style.color = '#FFFFFF';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#C8A464';
+              e.currentTarget.style.color = '#A68142';
             }}
             className="desktop-visit-btn"
           >
@@ -245,8 +246,8 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
           <button
             onClick={onOpenConcierge}
             style={{
-              background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-              color: '#070605',
+              background: 'linear-gradient(135deg, #A68142 0%, #836330 100%)',
+              color: '#FFFFFF',
               border: 'none',
               padding: '10px 22px',
               fontSize: '11px',
@@ -255,18 +256,18 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
               textTransform: 'uppercase',
               cursor: 'pointer',
               transition: 'all 0.25s ease',
-              boxShadow: '0 4px 18px rgba(200, 164, 100, 0.3)',
+              boxShadow: '0 4px 18px rgba(166, 129, 66, 0.35)',
               display: 'flex',
               alignItems: 'center',
               gap: '6px'
             }}
             onMouseOver={(e) => {
               e.currentTarget.style.transform = 'translateY(-1px)';
-              e.currentTarget.style.boxShadow = '0 6px 22px rgba(200, 164, 100, 0.45)';
+              e.currentTarget.style.boxShadow = '0 6px 22px rgba(166, 129, 66, 0.5)';
             }}
             onMouseOut={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 18px rgba(200, 164, 100, 0.3)';
+              e.currentTarget.style.boxShadow = '0 4px 18px rgba(166, 129, 66, 0.35)';
             }}
           >
             <PhoneCall size={13} />

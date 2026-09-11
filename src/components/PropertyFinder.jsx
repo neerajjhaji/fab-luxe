@@ -33,17 +33,17 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
   return (
     <section style={{
       width: '100%',
-      backgroundColor: '#15120E',
+      backgroundColor: '#FAF7F2',
       padding: '90px 4vw',
-      color: '#FFFFFF',
-      borderTop: '1px solid rgba(200, 164, 100, 0.2)',
+      color: '#1A1815',
+      borderTop: '1px solid rgba(166, 129, 66, 0.2)',
       boxSizing: 'border-box'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <div style={{
             fontSize: '12px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             letterSpacing: '2.5px',
             fontWeight: '700',
@@ -55,30 +55,30 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
             fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif",
             fontSize: 'clamp(32px, 4vw, 48px)',
             fontWeight: '700',
-            color: '#FFFFFF'
+            color: '#1A1815'
           }}>
             Discover Your Residence & Customize Payment Schedule
           </h2>
-          <p style={{ fontSize: '15px', color: '#B0A89C', maxWidth: '650px', margin: '8px auto 0' }}>
+          <p style={{ fontSize: '15px', color: '#5E574F', maxWidth: '650px', margin: '8px auto 0' }}>
             Filter Sector 4 residences by typology and test instant real-time bank subvention & loan payment estimates.
           </p>
         </div>
 
         {/* Filter Controls Bar */}
         <div style={{
-          backgroundColor: '#0D0B09',
-          border: '1px solid #C8A464',
+          backgroundColor: '#FFFFFF',
+          border: '1px solid #A68142',
           borderRadius: '6px',
           padding: '24px 32px',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '24px',
           marginBottom: '40px',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+          boxShadow: '0 8px 24px rgba(0,0,0,0.04)'
         }}>
           {/* Typology Dropdown */}
           <div>
-            <label style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
+            <label style={{ fontSize: '11px', color: '#A68142', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
               Select Typology
             </label>
             <select
@@ -86,9 +86,9 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
               onChange={(e) => setSelectedTypology(e.target.value)}
               style={{
                 width: '100%',
-                backgroundColor: '#15120E',
-                color: '#FFFFFF',
-                border: '1px solid rgba(200, 164, 100, 0.3)',
+                backgroundColor: '#FAF7F2',
+                color: '#1A1815',
+                border: '1px solid rgba(166, 129, 66, 0.3)',
                 padding: '12px 14px',
                 borderRadius: '4px',
                 fontSize: '13px',
@@ -104,7 +104,7 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
 
           {/* View Dropdown */}
           <div>
-            <label style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
+            <label style={{ fontSize: '11px', color: '#A68142', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
               Preferred Orientation / View
             </label>
             <select
@@ -112,9 +112,9 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
               onChange={(e) => setSelectedView(e.target.value)}
               style={{
                 width: '100%',
-                backgroundColor: '#15120E',
-                color: '#FFFFFF',
-                border: '1px solid rgba(200, 164, 100, 0.3)',
+                backgroundColor: '#FAF7F2',
+                color: '#1A1815',
+                border: '1px solid rgba(166, 129, 66, 0.3)',
                 padding: '12px 14px',
                 borderRadius: '4px',
                 fontSize: '13px',
@@ -131,7 +131,7 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
 
           {/* Budget Filter */}
           <div>
-            <label style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
+            <label style={{ fontSize: '11px', color: '#A68142', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', display: 'block', marginBottom: '8px' }}>
               Price Range
             </label>
             <select
@@ -139,9 +139,9 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
               onChange={(e) => setSelectedBudget(e.target.value)}
               style={{
                 width: '100%',
-                backgroundColor: '#15120E',
-                color: '#FFFFFF',
-                border: '1px solid rgba(200, 164, 100, 0.3)',
+                backgroundColor: '#FAF7F2',
+                color: '#1A1815',
+                border: '1px solid rgba(166, 129, 66, 0.3)',
                 padding: '12px 14px',
                 borderRadius: '4px',
                 fontSize: '13px',
@@ -163,8 +163,8 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
               style={{
                 flex: 1,
                 padding: '12px',
-                backgroundColor: '#C8A464',
-                color: '#0D0B09',
+                backgroundColor: '#A68142',
+                color: '#FFFFFF',
                 border: 'none',
                 borderRadius: '4px',
                 fontWeight: '700',
@@ -183,25 +183,26 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '24px', marginBottom: '60px' }}>
           {filteredItems.map(item => (
             <div key={item.id} style={{
-              backgroundColor: '#0D0B09',
-              border: '1px solid rgba(200,164,100,0.3)',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid rgba(166,129,66,0.3)',
               borderRadius: '6px',
               padding: '28px',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'space-between'
+              justifyContent: 'space-between',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.03)'
             }}>
               <div>
-                <div style={{ fontSize: '11px', color: '#C8A464', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>
+                <div style={{ fontSize: '11px', color: '#A68142', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>
                   {item.superArea} • Sector 4
                 </div>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '26px', color: '#FFFFFF', marginBottom: '8px' }}>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '26px', color: '#1A1815', marginBottom: '8px' }}>
                   {item.title}
                 </h3>
-                <div style={{ fontSize: '22px', color: '#C8A464', fontWeight: '700', fontFamily: "'Cormorant Garamond', serif", marginBottom: '14px' }}>
+                <div style={{ fontSize: '22px', color: '#A68142', fontWeight: '700', fontFamily: "'Cormorant Garamond', serif", marginBottom: '14px' }}>
                   {item.price}
                 </div>
-                <p style={{ fontSize: '13px', color: '#A0988A', lineHeight: '1.5', marginBottom: '16px' }}>
+                <p style={{ fontSize: '13px', color: '#5E574F', lineHeight: '1.5', marginBottom: '16px' }}>
                   {item.description}
                 </p>
               </div>
@@ -212,14 +213,15 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
                   style={{
                     flex: 1,
                     padding: '12px',
-                    background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                    color: '#0D0B09',
+                    backgroundColor: '#A68142',
+                    color: '#FFFFFF',
                     border: 'none',
                     fontWeight: '700',
                     fontSize: '12px',
                     textTransform: 'uppercase',
                     borderRadius: '2px',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 12px rgba(166, 129, 66, 0.25)'
                   }}
                 >
                   Book Private Visit
@@ -228,9 +230,9 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
                   onClick={onOpenFloorPlan}
                   style={{
                     padding: '12px 18px',
-                    background: 'transparent',
-                    border: '1px solid #C8A464',
-                    color: '#C8A464',
+                    backgroundColor: '#FAF7F2',
+                    border: '1px solid #A68142',
+                    color: '#A68142',
                     fontWeight: '600',
                     fontSize: '12px',
                     textTransform: 'uppercase',
@@ -247,18 +249,18 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
 
         {/* DYNAMIC REAL-TIME EMI CALCULATOR CARD */}
         <div style={{
-          backgroundColor: '#0D0B09',
-          border: '2px solid #C8A464',
+          backgroundColor: '#FFFFFF',
+          border: '2px solid #A68142',
           borderRadius: '8px',
           padding: '36px',
-          boxShadow: '0 20px 50px rgba(0,0,0,0.8)'
+          boxShadow: '0 8px 30px rgba(0,0,0,0.05)'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#C8A464', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#A68142', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px' }}>
             <Calculator size={18} />
             DYNAMIC PAYMENT & EMI SLIDER CALCULATOR
           </div>
 
-          <h3 style={{ fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif", fontSize: '28px', color: '#FFFFFF', fontWeight: '700', marginBottom: '24px' }}>
+          <h3 style={{ fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif", fontSize: '28px', color: '#1A1815', fontWeight: '700', marginBottom: '24px' }}>
             Test Instant Loan EMI & Custom Down Payment
           </h3>
 
@@ -266,9 +268,9 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
             {/* Sliders Column */}
             <div style={{ display: 'grid', gap: '20px' }}>
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#D0D0D0', marginBottom: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#1A1815', marginBottom: '8px' }}>
                   <span>Property Price Value:</span>
-                  <strong style={{ color: '#C8A464' }}>₹ {(propertyVal / 10000000).toFixed(2)} Cr</strong>
+                  <strong style={{ color: '#A68142' }}>₹ {(propertyVal / 10000000).toFixed(2)} Cr</strong>
                 </div>
                 <input
                   type="range"
@@ -277,14 +279,14 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
                   step="1000000"
                   value={propertyVal}
                   onChange={(e) => setPropertyVal(Number(e.target.value))}
-                  style={{ width: '100%', accentColor: '#C8A464', cursor: 'pointer' }}
+                  style={{ width: '100%', accentColor: '#A68142', cursor: 'pointer' }}
                 />
               </div>
 
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#D0D0D0', marginBottom: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', color: '#1A1815', marginBottom: '8px' }}>
                   <span>Down Payment ({downPayPercent}%):</span>
-                  <strong style={{ color: '#C8A464' }}>₹ {(downPaymentVal / 100000).toFixed(2)} Lakhs</strong>
+                  <strong style={{ color: '#A68142' }}>₹ {(downPaymentVal / 100000).toFixed(2)} Lakhs</strong>
                 </div>
                 <input
                   type="range"
@@ -293,17 +295,17 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
                   step="5"
                   value={downPayPercent}
                   onChange={(e) => setDownPayPercent(Number(e.target.value))}
-                  style={{ width: '100%', accentColor: '#C8A464', cursor: 'pointer' }}
+                  style={{ width: '100%', accentColor: '#A68142', cursor: 'pointer' }}
                 />
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
                 <div>
-                  <div style={{ fontSize: '12px', color: '#A0988A', marginBottom: '6px' }}>Loan Tenure:</div>
+                  <div style={{ fontSize: '12px', color: '#5E574F', marginBottom: '6px' }}>Loan Tenure:</div>
                   <select
                     value={loanTenureYears}
                     onChange={(e) => setLoanTenureYears(Number(e.target.value))}
-                    style={{ width: '100%', backgroundColor: '#15120E', border: '1px solid rgba(200,164,100,0.3)', color: '#FFFFFF', padding: '10px', borderRadius: '4px', fontSize: '13px' }}
+                    style={{ width: '100%', backgroundColor: '#FAF7F2', border: '1px solid rgba(166,129,66,0.3)', color: '#1A1815', padding: '10px', borderRadius: '4px', fontSize: '13px' }}
                   >
                     <option value={10}>10 Years</option>
                     <option value={15}>15 Years</option>
@@ -314,13 +316,13 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
                 </div>
 
                 <div>
-                  <div style={{ fontSize: '12px', color: '#A0988A', marginBottom: '6px' }}>Interest Rate (%):</div>
+                  <div style={{ fontSize: '12px', color: '#5E574F', marginBottom: '6px' }}>Interest Rate (%):</div>
                   <input
                     type="number"
                     step="0.1"
                     value={interestRate}
                     onChange={(e) => setInterestRate(Number(e.target.value))}
-                    style={{ width: '100%', backgroundColor: '#15120E', border: '1px solid rgba(200,164,100,0.3)', color: '#FFFFFF', padding: '10px', borderRadius: '4px', fontSize: '13px' }}
+                    style={{ width: '100%', backgroundColor: '#FAF7F2', border: '1px solid rgba(166,129,66,0.3)', color: '#1A1815', padding: '10px', borderRadius: '4px', fontSize: '13px' }}
                   />
                 </div>
               </div>
@@ -328,21 +330,21 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
 
             {/* Calculated Monthly EMI Result Box */}
             <div style={{
-              backgroundColor: '#15120E',
-              border: '1px solid #C8A464',
+              backgroundColor: '#FAF7F2',
+              border: '1px solid #A68142',
               borderRadius: '6px',
               padding: '28px',
               textAlign: 'center'
             }}>
-              <div style={{ fontSize: '11px', color: '#A0988A', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
+              <div style={{ fontSize: '11px', color: '#5E574F', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
                 ESTIMATED MONTHLY INSTALLMENT
               </div>
 
-              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '36px', fontWeight: '800', color: '#C8A464', marginBottom: '8px' }}>
-                ₹ {monthlyEMI.toLocaleString('en-IN')} <span style={{ fontSize: '14px', color: '#FFFFFF' }}>/ Month</span>
+              <div style={{ fontFamily: "'Outfit', sans-serif", fontSize: '36px', fontWeight: '800', color: '#A68142', marginBottom: '8px' }}>
+                ₹ {monthlyEMI.toLocaleString('en-IN')} <span style={{ fontSize: '14px', color: '#1A1815' }}>/ Month</span>
               </div>
 
-              <div style={{ fontSize: '12px', color: '#B0A89C', marginBottom: '20px' }}>
+              <div style={{ fontSize: '12px', color: '#5E574F', marginBottom: '20px' }}>
                 Loan Amount: ₹ {(loanAmount / 10000000).toFixed(2)} Cr • Down Payment: ₹ {(downPaymentVal / 100000).toFixed(2)} L
               </div>
 
@@ -351,14 +353,15 @@ export default function PropertyFinder({ onOpenSiteVisit, onOpenFloorPlan }) {
                 style={{
                   width: '100%',
                   padding: '14px',
-                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '800',
                   fontSize: '12px',
                   textTransform: 'uppercase',
                   borderRadius: '3px',
-                  cursor: 'pointer'
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 12px rgba(166, 129, 66, 0.3)'
                 }}
               >
                 Apply for Bank Subvention Plan

@@ -5,10 +5,10 @@ import { PHILOSOPHY_POINTS } from '../data/projectsData';
 export default function Philosophy() {
   return (
     <section id="philosophy" style={{
-      backgroundColor: '#070605',
-      color: '#F5F2EC',
+      backgroundColor: '#FAF8F5',
+      color: '#1A1815',
       padding: '100px 4vw',
-      borderBottom: '1px solid rgba(200, 164, 100, 0.15)'
+      borderBottom: '1px solid rgba(166, 129, 66, 0.15)'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
 
@@ -19,7 +19,7 @@ export default function Philosophy() {
             fontSize: '12px',
             fontWeight: '700',
             letterSpacing: '3px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             display: 'block',
             marginBottom: '10px'
@@ -31,14 +31,14 @@ export default function Philosophy() {
             fontSize: 'clamp(32px, 4vw, 52px)',
             fontWeight: '700',
             lineHeight: '1.15',
-            color: '#F5F2EC'
+            color: '#1A1815'
           }}>
-            Do Good. Do Well. <span style={{ color: '#C8A464', fontStyle: 'italic' }}>Crafting Iconic Residences.</span>
+            Do Good. Do Well. <span style={{ color: '#A68142', fontStyle: 'italic' }}>Crafting Iconic Residences.</span>
           </h2>
           <div style={{
             width: '60px',
             height: '2px',
-            backgroundColor: '#C8A464',
+            backgroundColor: '#A68142',
             margin: '20px auto 0'
           }} />
         </div>
@@ -53,9 +53,10 @@ export default function Philosophy() {
           {/* Left Column: Vision Card */}
           <div style={{
             position: 'relative',
-            borderRadius: '2px',
+            borderRadius: '6px',
             overflow: 'hidden',
-            border: '1px solid rgba(200, 164, 100, 0.25)'
+            border: '1px solid rgba(166, 129, 66, 0.25)',
+            boxShadow: '0 12px 32px rgba(0,0,0,0.06)'
           }}>
             <img
               src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
@@ -64,8 +65,7 @@ export default function Philosophy() {
                 width: '100%',
                 height: '480px',
                 objectFit: 'cover',
-                display: 'block',
-                filter: 'brightness(0.85)'
+                display: 'block'
               }}
             />
             <div style={{
@@ -73,15 +73,15 @@ export default function Philosophy() {
               bottom: 0,
               left: 0,
               right: 0,
-              background: 'linear-gradient(to top, rgba(7,6,5,0.95), transparent)',
+              background: 'linear-gradient(to top, rgba(26,24,21,0.92), transparent)',
               padding: '30px',
-              color: '#F5F2EC'
+              color: '#FFFFFF'
             }}>
               <div style={{
                 fontSize: '11px',
                 fontWeight: '700',
                 letterSpacing: '2px',
-                color: '#C8A464',
+                color: '#A68142',
                 textTransform: 'uppercase',
                 marginBottom: '6px'
               }}>
@@ -104,31 +104,32 @@ export default function Philosophy() {
               <div key={idx} style={{
                 display: 'flex',
                 gap: '20px',
-                backgroundColor: 'rgba(255, 255, 255, 0.02)',
-                border: '1px solid rgba(200, 164, 100, 0.15)',
+                backgroundColor: '#FFFFFF',
+                border: '1px solid rgba(166, 129, 66, 0.2)',
                 padding: '24px',
-                borderRadius: '2px',
-                transition: 'border-color 0.2s'
+                borderRadius: '6px',
+                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.03)',
+                transition: 'all 0.3s ease'
               }}>
                 <div style={{
-                  backgroundColor: 'rgba(200, 164, 100, 0.1)',
-                  border: '1px solid #C8A464',
+                  backgroundColor: '#FAF7F2',
+                  border: '1px solid #A68142',
                   width: '48px',
                   height: '48px',
-                  borderRadius: '2px',
+                  borderRadius: '4px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0
                 }}>
-                  <Sparkles size={22} style={{ color: '#C8A464' }} />
+                  <Sparkles size={22} style={{ color: '#A68142' }} />
                 </div>
                 <div>
                   <h4 style={{
                     fontFamily: 'Cormorant Garamond, serif',
                     fontSize: '22px',
                     fontWeight: '700',
-                    color: '#F5F2EC',
+                    color: '#1A1815',
                     margin: '0 0 6px'
                   }}>
                     {item.title}
@@ -136,7 +137,7 @@ export default function Philosophy() {
                   <p style={{
                     fontFamily: 'Inter, sans-serif',
                     fontSize: '14px',
-                    color: '#B0A89C',
+                    color: '#5E574F',
                     lineHeight: '1.6',
                     margin: 0
                   }}>

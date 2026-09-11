@@ -44,8 +44,8 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
 
   return (
     <div style={{
-      backgroundColor: '#0A0806',
-      borderBottom: '1px solid rgba(200, 164, 100, 0.25)',
+      backgroundColor: '#1A1815',
+      borderBottom: '1px solid rgba(166, 129, 66, 0.3)',
       color: '#FFFFFF',
       fontSize: '11px',
       padding: '8px 4vw',
@@ -68,9 +68,9 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px',
-            backgroundColor: 'rgba(200, 164, 100, 0.12)',
+            backgroundColor: 'rgba(200, 164, 100, 0.18)',
             border: '1px solid #C8A464',
-            color: '#C8A464',
+            color: '#EAD196',
             padding: '3px 10px',
             borderRadius: '4px',
             fontWeight: '800',
@@ -79,12 +79,12 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
             textTransform: 'uppercase',
             whiteSpace: 'nowrap'
           }}>
-            <IconComponent size={12} style={{ color: '#C8A464' }} />
+            <IconComponent size={12} style={{ color: '#EAD196' }} />
             <span>{activeItem.badge}</span>
           </div>
 
           <div style={{
-            color: '#E0D8CC',
+            color: '#F5F2EC',
             fontWeight: '600',
             transition: 'all 0.3s ease',
             whiteSpace: 'nowrap',
