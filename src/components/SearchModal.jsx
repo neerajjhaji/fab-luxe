@@ -38,15 +38,15 @@ export default function SearchModal({ isOpen, onClose, onOpenSiteVisit, onOpenFl
       padding: '60px 20px 20px'
     }}>
       <div style={{
-        backgroundColor: '#15120E',
-        border: '1px solid #C8A464',
+        backgroundColor: '#FFFFFF',
+        border: '1px solid #A68142',
         borderRadius: '6px',
         maxWidth: '680px',
         width: '100%',
-        color: '#FFFFFF',
+        color: '#1A1815',
         padding: '28px',
         position: 'relative',
-        boxShadow: '0 25px 60px rgba(0,0,0,0.9)'
+        boxShadow: '0 25px 60px rgba(166, 129, 66, 0.25)'
       }}>
         <button
           onClick={onClose}
@@ -56,7 +56,7 @@ export default function SearchModal({ isOpen, onClose, onOpenSiteVisit, onOpenFl
             right: '20px',
             background: 'none',
             border: 'none',
-            color: '#C8A464',
+            color: '#A68142',
             cursor: 'pointer'
           }}
         >
@@ -73,17 +73,18 @@ export default function SearchModal({ isOpen, onClose, onOpenSiteVisit, onOpenFl
             onChange={(e) => setQuery(e.target.value)}
             style={{
               width: '100%',
-              backgroundColor: '#0D0B09',
-              color: '#FFFFFF',
-              border: '1px solid #C8A464',
+              backgroundColor: '#FAF7F2',
+              color: '#1A1815',
+              border: '1px solid #A68142',
               padding: '16px 20px 16px 48px',
               borderRadius: '4px',
               fontSize: '16px',
               outline: 'none',
-              fontFamily: 'inherit'
+              fontFamily: 'inherit',
+              boxSizing: 'border-box'
             }}
           />
-          <Search size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: '#C8A464' }} />
+          <Search size={20} style={{ position: 'absolute', left: '16px', top: '16px', color: '#A68142' }} />
         </div>
 
         {/* Results List */}
@@ -94,8 +95,8 @@ export default function SearchModal({ isOpen, onClose, onOpenSiteVisit, onOpenFl
                 key={idx}
                 onClick={() => { onClose(); if (item.action) item.action(); }}
                 style={{
-                  backgroundColor: '#0D0B09',
-                  border: '1px solid rgba(200, 164, 100, 0.2)',
+                  backgroundColor: '#FAF7F2',
+                  border: '1px solid rgba(166, 129, 66, 0.2)',
                   borderRadius: '4px',
                   padding: '14px 18px',
                   display: 'flex',
@@ -104,26 +105,26 @@ export default function SearchModal({ isOpen, onClose, onOpenSiteVisit, onOpenFl
                   cursor: 'pointer',
                   transition: 'border-color 0.2s'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.borderColor = '#C8A464'}
-                onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(200, 164, 100, 0.2)'}
+                onMouseEnter={(e) => e.currentTarget.style.borderColor = '#A68142'}
+                onMouseLeave={(e) => e.currentTarget.style.borderColor = 'rgba(166, 129, 66, 0.2)'}
               >
                 <div>
-                  <span style={{ fontSize: '10px', color: '#C8A464', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                  <span style={{ fontSize: '10px', color: '#A68142', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>
                     {item.type}
                   </span>
-                  <div style={{ fontSize: '15px', fontWeight: '600', color: '#FFFFFF' }}>
+                  <div style={{ fontSize: '15px', fontWeight: '600', color: '#1A1815' }}>
                     {item.title}
                   </div>
-                  <div style={{ fontSize: '12px', color: '#A0988A', marginTop: '2px' }}>
+                  <div style={{ fontSize: '12px', color: '#5E574F', marginTop: '2px' }}>
                     {item.desc}
                   </div>
                 </div>
 
-                <ArrowRight size={18} style={{ color: '#C8A464' }} />
+                <ArrowRight size={18} style={{ color: '#A68142' }} />
               </div>
             ))
           ) : (
-            <div style={{ textAlign: 'center', padding: '40px', color: '#A0988A' }}>
+            <div style={{ textAlign: 'center', padding: '40px', color: '#5E574F' }}>
               No exact matches found for "{query}". Try searching for <strong>3+1 BHK</strong>, <strong>Clubhouse</strong>, or <strong>Location</strong>.
             </div>
           )}

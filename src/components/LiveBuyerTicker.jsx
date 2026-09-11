@@ -44,9 +44,9 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
 
   return (
     <div style={{
-      backgroundColor: '#1A1815',
+      backgroundColor: '#FAF7F2',
       borderBottom: '1px solid rgba(166, 129, 66, 0.3)',
-      color: '#FFFFFF',
+      color: '#1A1815',
       fontSize: '11px',
       padding: '8px 4vw',
       fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -68,9 +68,9 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '6px',
-            backgroundColor: 'rgba(200, 164, 100, 0.18)',
-            border: '1px solid #C8A464',
-            color: '#EAD196',
+            backgroundColor: 'rgba(166, 129, 66, 0.18)',
+            border: '1px solid #A68142',
+            color: '#A68142',
             padding: '3px 10px',
             borderRadius: '4px',
             fontWeight: '800',
@@ -79,12 +79,12 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
             textTransform: 'uppercase',
             whiteSpace: 'nowrap'
           }}>
-            <IconComponent size={12} style={{ color: '#EAD196' }} />
+            <IconComponent size={12} style={{ color: '#A68142' }} />
             <span>{activeItem.badge}</span>
           </div>
 
           <div style={{
-            color: '#F5F2EC',
+            color: '#1A1815',
             fontWeight: '600',
             transition: 'all 0.3s ease',
             whiteSpace: 'nowrap',
@@ -99,7 +99,7 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
 
         {/* Right Official Links */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#00E676', fontSize: '11px', fontWeight: '700' }} className="hide-on-mobile">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#2E7D32', fontSize: '11px', fontWeight: '700' }} className="hide-on-mobile">
             <CheckCircle2 size={13} />
             <span>VERIFIED ADVISORY</span>
           </div>
@@ -109,7 +109,7 @@ export default function LiveBuyerTicker({ _onOpenSiteVisit, onOpenConcierge }) {
             style={{
               background: 'none',
               border: 'none',
-              color: '#C8A464',
+              color: '#A68142',
               fontWeight: '700',
               fontSize: '11px',
               cursor: 'pointer',

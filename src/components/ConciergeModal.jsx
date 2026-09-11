@@ -96,15 +96,15 @@ export default function ConciergeModal({ isOpen, onClose }) {
       padding: '20px'
     }}>
       <div style={{
-        backgroundColor: '#15120E',
-        border: '1px solid #C8A464',
+        backgroundColor: '#FFFFFF',
+        border: '1px solid #A68142',
         borderRadius: '6px',
         maxWidth: '520px',
         width: '100%',
-        color: '#FFFFFF',
+        color: '#1A1815',
         padding: '36px 32px',
         position: 'relative',
-        boxShadow: '0 25px 60px rgba(0,0,0,0.9)'
+        boxShadow: '0 25px 60px rgba(166, 129, 66, 0.25)'
       }}>
         <button
           onClick={onClose}
@@ -114,7 +114,7 @@ export default function ConciergeModal({ isOpen, onClose }) {
             right: '20px',
             background: 'none',
             border: 'none',
-            color: '#C8A464',
+            color: '#A68142',
             cursor: 'pointer'
           }}
         >
@@ -123,24 +123,24 @@ export default function ConciergeModal({ isOpen, onClose }) {
 
         {!isSuccess ? (
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#C8A464', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#A68142', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
               <Crown size={16} />
               FORBES PRIVATE DESK
             </div>
 
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#FFFFFF', fontWeight: '600', marginBottom: '8px' }}>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#1A1815', fontWeight: '600', marginBottom: '8px' }}>
               Request Private Executive Call
             </h2>
 
-            <p style={{ fontSize: '13px', color: '#B0A89C', marginBottom: '24px' }}>
+            <p style={{ fontSize: '13px', color: '#5E574F', marginBottom: '24px' }}>
               Sector 4, Greater Noida West • Connect with our Senior Portfolio Director for confidential consultation.
             </p>
 
             {errorMessage && (
               <div style={{
-                backgroundColor: 'rgba(239, 68, 68, 0.15)',
-                border: '1px solid rgba(239, 68, 68, 0.4)',
-                color: '#F87171',
+                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                border: '1px solid rgba(239, 68, 68, 0.3)',
+                color: '#DC2626',
                 padding: '12px 16px',
                 borderRadius: '4px',
                 fontSize: '13px',
@@ -152,7 +152,7 @@ export default function ConciergeModal({ isOpen, onClose }) {
 
             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '16px' }}>
               <div>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                   Full Name *
                 </label>
                 <input
@@ -163,20 +163,21 @@ export default function ConciergeModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   style={{
                     width: '100%',
-                    backgroundColor: '#0D0B09',
-                    color: '#FFFFFF',
-                    border: '1px solid rgba(200, 164, 100, 0.3)',
+                    backgroundColor: '#FAF7F2',
+                    color: '#1A1815',
+                    border: '1px solid rgba(166, 129, 66, 0.3)',
                     padding: '12px',
                     borderRadius: '4px',
                     fontSize: '13px',
-                    outline: 'none'
+                    outline: 'none',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
                 <div>
-                  <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                  <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                     Email *
                   </label>
                   <input
@@ -187,19 +188,20 @@ export default function ConciergeModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     style={{
                       width: '100%',
-                      backgroundColor: '#0D0B09',
-                      color: '#FFFFFF',
-                      border: '1px solid rgba(200, 164, 100, 0.3)',
+                      backgroundColor: '#FAF7F2',
+                      color: '#1A1815',
+                      border: '1px solid rgba(166, 129, 66, 0.3)',
                       padding: '12px',
                       borderRadius: '4px',
                       fontSize: '13px',
-                      outline: 'none'
+                      outline: 'none',
+                      boxSizing: 'border-box'
                     }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                  <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                     Phone *
                   </label>
                   <input
@@ -210,20 +212,21 @@ export default function ConciergeModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     style={{
                       width: '100%',
-                      backgroundColor: '#0D0B09',
-                      color: '#FFFFFF',
-                      border: '1px solid rgba(200, 164, 100, 0.3)',
+                      backgroundColor: '#FAF7F2',
+                      color: '#1A1815',
+                      border: '1px solid rgba(166, 129, 66, 0.3)',
                       padding: '12px',
                       borderRadius: '4px',
                       fontSize: '13px',
-                      outline: 'none'
+                      outline: 'none',
+                      boxSizing: 'border-box'
                     }}
                   />
                 </div>
               </div>
 
               <div>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                   Consultation Topic
                 </label>
                 <select
@@ -231,13 +234,14 @@ export default function ConciergeModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, queryType: e.target.value })}
                   style={{
                     width: '100%',
-                    backgroundColor: '#0D0B09',
-                    color: '#FFFFFF',
-                    border: '1px solid rgba(200, 164, 100, 0.3)',
+                    backgroundColor: '#FAF7F2',
+                    color: '#1A1815',
+                    border: '1px solid rgba(166, 129, 66, 0.3)',
                     padding: '12px',
                     borderRadius: '4px',
                     fontSize: '13px',
-                    outline: 'none'
+                    outline: 'none',
+                    boxSizing: 'border-box'
                   }}
                 >
                   <option value="Pricing & Customized Payment Plan">Pricing & Flexible Payment Schedule</option>
@@ -248,7 +252,7 @@ export default function ConciergeModal({ isOpen, onClose }) {
               </div>
 
               <div>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                   Preferred Callback Window
                 </label>
                 <select
@@ -256,13 +260,14 @@ export default function ConciergeModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
                   style={{
                     width: '100%',
-                    backgroundColor: '#0D0B09',
-                    color: '#FFFFFF',
-                    border: '1px solid rgba(200, 164, 100, 0.3)',
+                    backgroundColor: '#FAF7F2',
+                    color: '#1A1815',
+                    border: '1px solid rgba(166, 129, 66, 0.3)',
                     padding: '12px',
                     borderRadius: '4px',
                     fontSize: '13px',
-                    outline: 'none'
+                    outline: 'none',
+                    boxSizing: 'border-box'
                   }}
                 >
                   <option value="Immediate Callback (Next 15 Mins)">Immediate Callback (Next 15 Mins)</option>
@@ -273,12 +278,12 @@ export default function ConciergeModal({ isOpen, onClose }) {
 
               {/* Math CAPTCHA */}
               <div style={{
-                backgroundColor: '#0D0B09',
-                border: '1px dashed #C8A464',
+                backgroundColor: '#FAF7F2',
+                border: '1px dashed #A68142',
                 padding: '12px',
                 borderRadius: '4px'
               }}>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '700', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '700', display: 'block', marginBottom: '6px' }}>
                   Security Verification: What is {num1} + {num2} ? *
                 </label>
                 <input
@@ -289,13 +294,14 @@ export default function ConciergeModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, captchaAnswer: e.target.value })}
                   style={{
                     width: '100%',
-                    backgroundColor: '#15120E',
-                    color: '#FFFFFF',
-                    border: '1px solid rgba(200, 164, 100, 0.3)',
+                    backgroundColor: '#FFFFFF',
+                    color: '#1A1815',
+                    border: '1px solid rgba(166, 129, 66, 0.3)',
                     padding: '10px 12px',
                     borderRadius: '4px',
                     fontSize: '13px',
-                    outline: 'none'
+                    outline: 'none',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
@@ -307,8 +313,8 @@ export default function ConciergeModal({ isOpen, onClose }) {
                   marginTop: '10px',
                   width: '100%',
                   padding: '16px',
-                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '700',
                   fontSize: '13px',
@@ -328,22 +334,22 @@ export default function ConciergeModal({ isOpen, onClose }) {
               width: '60px',
               height: '60px',
               borderRadius: '50%',
-              backgroundColor: 'rgba(200, 164, 100, 0.15)',
-              border: '2px solid #C8A464',
+              backgroundColor: 'rgba(166, 129, 66, 0.15)',
+              border: '2px solid #A68142',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 16px',
-              color: '#C8A464'
+              color: '#A68142'
             }}>
               <CheckCircle2 size={36} />
             </div>
 
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#FFFFFF', marginBottom: '12px' }}>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#1A1815', marginBottom: '12px' }}>
               Callback Request Confirmed
             </h2>
 
-            <p style={{ fontSize: '14px', color: '#B0A89C', marginBottom: '24px', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '14px', color: '#5E574F', marginBottom: '24px', lineHeight: '1.6' }}>
               Thank you, {formData.name}. Our Senior Portfolio Director will reach out to you at <strong>{formData.phone}</strong> during your requested window.
             </p>
 
@@ -351,7 +357,7 @@ export default function ConciergeModal({ isOpen, onClose }) {
               onClick={onClose}
               style={{
                 padding: '12px 28px',
-                background: '#C8A464',
+                backgroundColor: '#A68142',
                 color: '#0D0B09',
                 border: 'none',
                 fontWeight: '700',

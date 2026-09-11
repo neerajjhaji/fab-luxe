@@ -6,16 +6,17 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
   return (
     <section id="collections" style={{
       width: '100%',
-      backgroundColor: '#0D0B09',
+      backgroundColor: '#FAF8F5',
       padding: '100px 4vw',
-      color: '#FFFFFF',
+      color: '#1A1815',
+      borderTop: '1px solid rgba(166, 129, 66, 0.2)',
       boxSizing: 'border-box'
     }}>
       <div style={{ maxWidth: '1600px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <div style={{
             fontSize: '12px',
-            color: '#C8A464',
+            color: '#A68142',
             textTransform: 'uppercase',
             letterSpacing: '2.5px',
             fontWeight: '600',
@@ -26,12 +27,12 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 'clamp(32px, 4vw, 48px)',
-            fontWeight: '400',
-            color: '#FFFFFF'
+            fontWeight: '600',
+            color: '#1A1815'
           }}>
             The Residential Collections
           </h2>
-          <p style={{ fontSize: '15px', color: '#B0A89C', maxWidth: '640px', margin: '12px auto 0' }}>
+          <p style={{ fontSize: '15px', color: '#5E574F', maxWidth: '640px', margin: '12px auto 0' }}>
             Choose from meticulous layouts crafted with high-ceiling volumes, wrap-around terraces, and private lift access.
           </p>
         </div>
@@ -45,8 +46,8 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
             <div
               key={item.id}
               style={{
-                backgroundColor: '#15120E',
-                border: '1px solid rgba(200, 164, 100, 0.25)',
+                backgroundColor: '#FFFFFF',
+                border: '1px solid rgba(166, 129, 66, 0.25)',
                 borderRadius: '6px',
                 overflow: 'hidden',
                 display: 'flex',
@@ -55,12 +56,12 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#C8A464';
+                e.currentTarget.style.borderColor = '#A68142';
                 e.currentTarget.style.transform = 'translateY(-6px)';
-                e.currentTarget.style.boxShadow = '0 15px 35px rgba(200, 164, 100, 0.15)';
+                e.currentTarget.style.boxShadow = '0 15px 35px rgba(166, 129, 66, 0.2)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(200, 164, 100, 0.25)';
+                e.currentTarget.style.borderColor = 'rgba(166, 129, 66, 0.25)';
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
@@ -77,8 +78,8 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
                     position: 'absolute',
                     top: '16px',
                     left: '16px',
-                    backgroundColor: '#C8A464',
-                    color: '#0D0B09',
+                    backgroundColor: '#A68142',
+                    color: '#FFFFFF',
                     fontSize: '11px',
                     fontWeight: '700',
                     padding: '4px 10px',
@@ -92,7 +93,7 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
 
                 {/* Content */}
                 <div style={{ padding: '28px 24px' }}>
-                  <div style={{ fontSize: '12px', color: '#A0988A', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
+                  <div style={{ fontSize: '12px', color: '#5E574F', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '4px' }}>
                     {item.subtitle}
                   </div>
 
@@ -100,7 +101,7 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: '26px',
                     fontWeight: '600',
-                    color: '#FFFFFF',
+                    color: '#1A1815',
                     marginBottom: '8px'
                   }}>
                     {item.title}
@@ -109,18 +110,18 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
                   <div style={{
                     fontSize: '20px',
                     fontWeight: '700',
-                    color: '#C8A464',
+                    color: '#A68142',
                     fontFamily: "'Cormorant Garamond', serif",
                     marginBottom: '16px'
                   }}>
-                    {item.price} <span style={{ fontSize: '13px', color: '#A0988A', fontWeight: '400', fontFamily: 'sans-serif' }}>({item.area})</span>
+                    {item.price} <span style={{ fontSize: '13px', color: '#5E574F', fontWeight: '400', fontFamily: 'sans-serif' }}>({item.area})</span>
                   </div>
 
                   {/* Feature Checklist */}
-                  <div style={{ borderTop: '1px solid rgba(200,164,100,0.15)', paddingTop: '16px', display: 'grid', gap: '8px' }}>
+                  <div style={{ borderTop: '1px solid rgba(166, 129, 66, 0.15)', paddingTop: '16px', display: 'grid', gap: '8px' }}>
                     {item.features.map((feat, fIdx) => (
-                      <div key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#CCCCCC' }}>
-                        <Check size={14} style={{ color: '#C8A464', flexShrink: 0 }} />
+                      <div key={fIdx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#333333' }}>
+                        <Check size={14} style={{ color: '#A68142', flexShrink: 0 }} />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -136,8 +137,8 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
                     flex: 1,
                     padding: '12px',
                     background: 'transparent',
-                    border: '1px solid #C8A464',
-                    color: '#C8A464',
+                    border: '1px solid #A68142',
+                    color: '#A68142',
                     fontWeight: '600',
                     fontSize: '11px',
                     textTransform: 'uppercase',
@@ -159,8 +160,8 @@ export default function Collections({ onOpenFloorPlan, onOpenSiteVisit }) {
                   style={{
                     flex: 1,
                     padding: '12px',
-                    background: '#C8A464',
-                    color: '#0D0B09',
+                    backgroundColor: '#A68142',
+                    color: '#FFFFFF',
                     border: 'none',
                     fontWeight: '700',
                     fontSize: '11px',

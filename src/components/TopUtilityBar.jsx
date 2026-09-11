@@ -6,8 +6,8 @@ export default function TopUtilityBar({ onOpenBrochure }) {
   return (
     <div style={{
       width: '100%',
-      backgroundColor: '#070605',
-      borderBottom: '1px solid rgba(200, 164, 100, 0.15)',
+      backgroundColor: '#FAF7F2',
+      borderBottom: '1px solid rgba(166, 129, 66, 0.2)',
       boxSizing: 'border-box',
       zIndex: 100,
       position: 'relative'
@@ -21,26 +21,26 @@ export default function TopUtilityBar({ onOpenBrochure }) {
         justifyContent: 'space-between',
         fontSize: '11px',
         fontWeight: '500',
-        color: '#C8A464',
+        color: '#A68142',
         boxSizing: 'border-box'
       }}>
         {/* Left items */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <span style={{ color: '#E5D5C0', letterSpacing: '0.5px' }}>
-            RERA No: <strong style={{ color: '#C8A464' }}>{FAB_LUXE_PROJECT_DETAILS.reraNo}</strong>
+          <span style={{ color: '#1A1815', letterSpacing: '0.5px' }}>
+            RERA No: <strong style={{ color: '#A68142' }}>{FAB_LUXE_PROJECT_DETAILS.reraNo}</strong>
           </span>
 
           <a
             href={`tel:${FAB_LUXE_PROJECT_DETAILS.helpline.replace(/\s+/g, '')}`}
             style={{
-              color: '#F5F2EC',
+              color: '#1A1815',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
               gap: '6px'
             }}
           >
-            <Phone size={12} style={{ color: '#C8A464' }} />
+            <Phone size={12} style={{ color: '#A68142' }} />
             <span>Call: <strong>{FAB_LUXE_PROJECT_DETAILS.helpline}</strong></span>
           </a>
 
@@ -63,8 +63,8 @@ export default function TopUtilityBar({ onOpenBrochure }) {
 
         {/* Right items */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-          <div style={{ color: '#B0A89C', fontSize: '11px', display: 'flex', alignItems: 'center', gap: '5px' }}>
-            <ShieldCheck size={13} style={{ color: '#C8A464' }} />
+          <div style={{ color: '#5E574F', fontSize: '11px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <ShieldCheck size={13} style={{ color: '#A68142' }} />
             <span>3 Years Forbes Managed Services</span>
           </div>
 
@@ -73,7 +73,7 @@ export default function TopUtilityBar({ onOpenBrochure }) {
             style={{
               background: 'none',
               border: 'none',
-              color: '#C8A464',
+              color: '#A68142',
               fontSize: '11px',
               fontWeight: '600',
               cursor: 'pointer',

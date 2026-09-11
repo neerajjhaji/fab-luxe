@@ -25,17 +25,17 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
       padding: '20px'
     }}>
       <div style={{
-        backgroundColor: '#15120E',
-        border: '1px solid #C8A464',
+        backgroundColor: '#FFFFFF',
+        border: '1px solid #A68142',
         borderRadius: '6px',
         maxWidth: '920px',
         width: '100%',
         maxHeight: '92vh',
         overflowY: 'auto',
-        color: '#FFFFFF',
+        color: '#1A1815',
         padding: '36px 32px',
         position: 'relative',
-        boxShadow: '0 25px 60px rgba(0,0,0,0.9)'
+        boxShadow: '0 25px 60px rgba(166, 129, 66, 0.25)'
       }}>
         <button
           onClick={onClose}
@@ -45,23 +45,23 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
             right: '20px',
             background: 'none',
             border: 'none',
-            color: '#C8A464',
+            color: '#A68142',
             cursor: 'pointer'
           }}
         >
           <X size={24} />
         </button>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#C8A464', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#A68142', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
           <Layers size={16} />
           INTERACTIVE ARCHITECTURAL PLANS
         </div>
 
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#FFFFFF', fontWeight: '600', marginBottom: '8px' }}>
+        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#1A1815', fontWeight: '600', marginBottom: '8px' }}>
           Floor Plans & Spatial Master Layouts
         </h2>
 
-        <p style={{ fontSize: '13px', color: '#B0A89C', marginBottom: '24px' }}>
+        <p style={{ fontSize: '13px', color: '#5E574F', marginBottom: '24px' }}>
           Sector 4, Greater Noida West • Designed with wrap-around balconies and double-height ceiling proportions.
         </p>
 
@@ -75,9 +75,9 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
                 flex: 1,
                 padding: '12px 18px',
                 borderRadius: '4px',
-                border: activeTab === typ.id ? '1px solid #C8A464' : '1px solid rgba(200,164,100,0.2)',
-                background: activeTab === typ.id ? '#C8A464' : '#0D0B09',
-                color: activeTab === typ.id ? '#0D0B09' : '#C8A464',
+                border: activeTab === typ.id ? '1px solid #A68142' : '1px solid rgba(166, 129, 66, 0.2)',
+                background: activeTab === typ.id ? '#A68142' : '#FAF7F2',
+                color: activeTab === typ.id ? '#FFFFFF' : '#A68142',
                 fontWeight: '700',
                 fontSize: '13px',
                 cursor: 'pointer',
@@ -93,8 +93,8 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px', alignItems: 'center' }}>
           {/* Floor Plan Image */}
           <div style={{
-            backgroundColor: '#0D0B09',
-            border: '1px solid rgba(200, 164, 100, 0.3)',
+            backgroundColor: '#FAF7F2',
+            border: '1px solid rgba(166, 129, 66, 0.3)',
             borderRadius: '4px',
             padding: '16px',
             textAlign: 'center'
@@ -104,7 +104,7 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
               alt={currentPlan.title}
               style={{ width: '100%', maxHeight: '340px', objectFit: 'contain', borderRadius: '4px' }}
             />
-            <div style={{ marginTop: '12px', fontSize: '12px', color: '#A0988A' }}>
+            <div style={{ marginTop: '12px', fontSize: '12px', color: '#5E574F' }}>
               Architectural Schematic Blueprint • RERA {FAB_LUXE_PROJECT_DETAILS.reraNo}
             </div>
           </div>
@@ -114,20 +114,20 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
             <div style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: '26px',
-              color: '#FFFFFF',
+              color: '#1A1815',
               fontWeight: '600',
               marginBottom: '6px'
             }}>
               {currentPlan.title}
             </div>
 
-            <div style={{ fontSize: '20px', color: '#C8A464', fontWeight: '700', fontFamily: "'Cormorant Garamond', serif", marginBottom: '16px' }}>
+            <div style={{ fontSize: '20px', color: '#A68142', fontWeight: '700', fontFamily: "'Cormorant Garamond', serif", marginBottom: '16px' }}>
               {currentPlan.price}
             </div>
 
             <div style={{
-              backgroundColor: '#0D0B09',
-              border: '1px solid rgba(200, 164, 100, 0.2)',
+              backgroundColor: '#FAF7F2',
+              border: '1px solid rgba(166, 129, 66, 0.2)',
               borderRadius: '4px',
               padding: '16px',
               marginBottom: '20px',
@@ -137,24 +137,24 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
               fontSize: '13px'
             }}>
               <div>
-                <span style={{ color: '#A0988A' }}>Super Area:</span>
-                <div style={{ color: '#FFFFFF', fontWeight: '700' }}>{currentPlan.superArea}</div>
+                <span style={{ color: '#5E574F' }}>Super Area:</span>
+                <div style={{ color: '#1A1815', fontWeight: '700' }}>{currentPlan.superArea}</div>
               </div>
 
               <div>
-                <span style={{ color: '#A0988A' }}>Carpet Area:</span>
-                <div style={{ color: '#FFFFFF', fontWeight: '700' }}>{currentPlan.carpetArea}</div>
+                <span style={{ color: '#5E574F' }}>Carpet Area:</span>
+                <div style={{ color: '#1A1815', fontWeight: '700' }}>{currentPlan.carpetArea}</div>
               </div>
             </div>
 
             <div style={{ marginBottom: '24px' }}>
-              <div style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', marginBottom: '8px' }}>
+              <div style={{ fontSize: '11px', color: '#A68142', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '700', marginBottom: '8px' }}>
                 Key Layout Features
               </div>
               <div style={{ display: 'grid', gap: '8px' }}>
                 {currentPlan.highlights.map((item, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#E0E0E0' }}>
-                    <CheckCircle2 size={15} style={{ color: '#C8A464', flexShrink: 0 }} />
+                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13px', color: '#333333' }}>
+                    <CheckCircle2 size={15} style={{ color: '#A68142', flexShrink: 0 }} />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -167,8 +167,8 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
                 style={{
                   flex: 1,
                   padding: '14px',
-                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '700',
                   fontSize: '12px',
@@ -185,8 +185,8 @@ export default function FloorPlanModal({ isOpen, onClose, onOpenSiteVisit, onOpe
                 style={{
                   padding: '14px 20px',
                   background: 'transparent',
-                  border: '1px solid #C8A464',
-                  color: '#C8A464',
+                  border: '1px solid #A68142',
+                  color: '#A68142',
                   fontWeight: '600',
                   fontSize: '12px',
                   textTransform: 'uppercase',

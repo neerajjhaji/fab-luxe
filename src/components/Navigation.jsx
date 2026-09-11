@@ -279,13 +279,14 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             style={{
               background: 'none',
-              border: '1px solid #C8A464',
-              color: '#C8A464',
+              border: '1px solid #A68142',
+              color: '#A68142',
               padding: '6px',
               cursor: 'pointer',
               display: 'none',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              borderRadius: '4px'
             }}
             className="mobile-menu-toggle"
           >
@@ -297,8 +298,8 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div style={{
-          backgroundColor: '#0A0907',
-          borderTop: '1px solid rgba(200, 164, 100, 0.3)',
+          backgroundColor: '#FAF7F2',
+          borderTop: '1px solid rgba(166, 129, 66, 0.3)',
           padding: '20px',
           display: 'flex',
           flexDirection: 'column',
@@ -311,7 +312,7 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
               style={{
                 background: 'none',
                 border: 'none',
-                color: activeSection === link.name ? '#C8A464' : '#F5F2EC',
+                color: activeSection === link.name ? '#A68142' : '#1A1815',
                 fontSize: '13px',
                 fontWeight: '700',
                 textAlign: 'left',
@@ -319,12 +320,12 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 padding: '12px 0',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+                borderBottom: '1px solid rgba(166, 129, 66, 0.15)',
                 letterSpacing: '1px'
               }}
             >
               <span>{link.label}</span>
-              <ChevronRight size={14} style={{ color: '#C8A464' }} />
+              <ChevronRight size={14} style={{ color: '#A68142' }} />
             </button>
           ))}
 
@@ -333,7 +334,7 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
             style={{
               background: 'none',
               border: 'none',
-              color: '#F5F2EC',
+              color: '#1A1815',
               fontSize: '13px',
               fontWeight: '700',
               textAlign: 'left',
@@ -341,12 +342,12 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
               alignItems: 'center',
               justifyContent: 'space-between',
               padding: '12px 0',
-              borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+              borderBottom: '1px solid rgba(166, 129, 66, 0.15)',
               letterSpacing: '1px'
             }}
           >
             <span>FLOOR PLANS</span>
-            <ChevronRight size={14} style={{ color: '#C8A464' }} />
+            <ChevronRight size={14} style={{ color: '#A68142' }} />
           </button>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '14px' }}>
@@ -354,13 +355,14 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
               onClick={() => { setMobileMenuOpen(false); onOpenSiteVisit(); }}
               style={{
                 backgroundColor: 'transparent',
-                border: '1px solid #C8A464',
-                color: '#C8A464',
+                border: '1px solid #A68142',
+                color: '#A68142',
                 padding: '12px',
                 fontSize: '12px',
                 fontWeight: '700',
                 letterSpacing: '1px',
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                borderRadius: '3px'
               }}
             >
               SCHEDULE SITE VISIT
@@ -368,14 +370,16 @@ export default function Navigation({ onOpenSiteVisit, onOpenConcierge, onOpenSea
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenConcierge(); }}
               style={{
-                background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                color: '#070605',
+                backgroundColor: '#A68142',
+                color: '#FFFFFF',
                 border: 'none',
                 padding: '12px',
                 fontSize: '12px',
                 fontWeight: '800',
                 letterSpacing: '1px',
-                textTransform: 'uppercase'
+                textTransform: 'uppercase',
+                borderRadius: '3px',
+                boxShadow: '0 4px 12px rgba(166, 129, 66, 0.3)'
               }}
             >
               ENQUIRE NOW

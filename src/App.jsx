@@ -138,8 +138,8 @@ export default function App() {
         <button
           onClick={() => setVirtualTourOpen(true)}
           style={{
-            backgroundColor: '#C8A464',
-            color: '#070605',
+            backgroundColor: '#A68142',
+            color: '#FFFFFF',
             border: 'none',
             padding: '10px 18px',
             borderRadius: '30px',
@@ -148,7 +148,7 @@ export default function App() {
             letterSpacing: '1px',
             textTransform: 'uppercase',
             cursor: 'pointer',
-            boxShadow: '0 8px 25px rgba(200, 164, 100, 0.4)',
+            boxShadow: '0 8px 25px rgba(166, 129, 66, 0.35)',
             display: 'flex',
             alignItems: 'center',
             gap: '6px'
@@ -160,9 +160,9 @@ export default function App() {
         <button
           onClick={() => setDetailDrawerOpen(true)}
           style={{
-            backgroundColor: '#15120E',
-            border: '1px solid #C8A464',
-            color: '#C8A464',
+            backgroundColor: '#FAF7F2',
+            border: '1px solid #A68142',
+            color: '#1A1815',
             padding: '10px 18px',
             borderRadius: '30px',
             fontSize: '11px',
@@ -170,7 +170,7 @@ export default function App() {
             letterSpacing: '1px',
             textTransform: 'uppercase',
             cursor: 'pointer',
-            boxShadow: '0 8px 25px rgba(0,0,0,0.8)',
+            boxShadow: '0 8px 25px rgba(26, 24, 21, 0.15)',
             display: 'flex',
             alignItems: 'center',
             gap: '8px'

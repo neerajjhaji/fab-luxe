@@ -93,15 +93,15 @@ export default function BrochureModal({ isOpen, onClose }) {
       padding: '20px'
     }}>
       <div style={{
-        backgroundColor: '#15120E',
-        border: '1px solid #C8A464',
+        backgroundColor: '#FFFFFF',
+        border: '1px solid #A68142',
         borderRadius: '6px',
         maxWidth: '520px',
         width: '100%',
-        color: '#FFFFFF',
+        color: '#1A1815',
         padding: '36px 32px',
         position: 'relative',
-        boxShadow: '0 25px 60px rgba(0,0,0,0.9)'
+        boxShadow: '0 25px 60px rgba(166, 129, 66, 0.25)'
       }}>
         <button
           onClick={onClose}
@@ -111,7 +111,7 @@ export default function BrochureModal({ isOpen, onClose }) {
             right: '20px',
             background: 'none',
             border: 'none',
-            color: '#C8A464',
+            color: '#A68142',
             cursor: 'pointer'
           }}
         >
@@ -120,24 +120,24 @@ export default function BrochureModal({ isOpen, onClose }) {
 
         {!isSuccess ? (
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#C8A464', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#A68142', fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '6px' }}>
               <Download size={16} />
               OFFICIAL PROJECT BROCHURE
             </div>
 
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#FFFFFF', fontWeight: '600', marginBottom: '8px' }}>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#1A1815', fontWeight: '600', marginBottom: '8px' }}>
               Download E-Brochure & Pricing Portfolio
             </h2>
 
-            <p style={{ fontSize: '13px', color: '#B0A89C', marginBottom: '24px' }}>
+            <p style={{ fontSize: '13px', color: '#5E574F', marginBottom: '24px' }}>
               Sector 4, Greater Noida West • Enter your details to instantly receive the high-resolution PDF brochure via Email & WhatsApp.
             </p>
 
             {errorMessage && (
               <div style={{
-                backgroundColor: 'rgba(239, 68, 68, 0.15)',
-                border: '1px solid rgba(239, 68, 68, 0.4)',
-                color: '#F87171',
+                backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                border: '1px solid rgba(239, 68, 68, 0.3)',
+                color: '#DC2626',
                 padding: '12px 16px',
                 borderRadius: '4px',
                 fontSize: '13px',
@@ -149,7 +149,7 @@ export default function BrochureModal({ isOpen, onClose }) {
 
             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '16px' }}>
               <div>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                   Full Name *
                 </label>
                 <div style={{ position: 'relative' }}>
@@ -161,21 +161,22 @@ export default function BrochureModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     style={{
                       width: '100%',
-                      backgroundColor: '#0D0B09',
-                      color: '#FFFFFF',
-                      border: '1px solid rgba(200, 164, 100, 0.3)',
+                      backgroundColor: '#FAF7F2',
+                      color: '#1A1815',
+                      border: '1px solid rgba(166, 129, 66, 0.3)',
                       padding: '12px 14px 12px 40px',
                       borderRadius: '4px',
                       fontSize: '13px',
-                      outline: 'none'
+                      outline: 'none',
+                      boxSizing: 'border-box'
                     }}
                   />
-                  <User size={16} style={{ position: 'absolute', left: '14px', top: '13px', color: '#C8A464' }} />
+                  <User size={16} style={{ position: 'absolute', left: '14px', top: '13px', color: '#A68142' }} />
                 </div>
               </div>
 
               <div>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                   Official Email Address *
                 </label>
                 <div style={{ position: 'relative' }}>
@@ -187,21 +188,22 @@ export default function BrochureModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     style={{
                       width: '100%',
-                      backgroundColor: '#0D0B09',
-                      color: '#FFFFFF',
-                      border: '1px solid rgba(200, 164, 100, 0.3)',
+                      backgroundColor: '#FAF7F2',
+                      color: '#1A1815',
+                      border: '1px solid rgba(166, 129, 66, 0.3)',
                       padding: '12px 14px 12px 40px',
                       borderRadius: '4px',
                       fontSize: '13px',
-                      outline: 'none'
+                      outline: 'none',
+                      boxSizing: 'border-box'
                     }}
                   />
-                  <Mail size={16} style={{ position: 'absolute', left: '14px', top: '13px', color: '#C8A464' }} />
+                  <Mail size={16} style={{ position: 'absolute', left: '14px', top: '13px', color: '#A68142' }} />
                 </div>
               </div>
 
               <div>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '600', display: 'block', marginBottom: '6px' }}>
                   WhatsApp Number *
                 </label>
                 <div style={{ position: 'relative' }}>
@@ -213,27 +215,28 @@ export default function BrochureModal({ isOpen, onClose }) {
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     style={{
                       width: '100%',
-                      backgroundColor: '#0D0B09',
-                      color: '#FFFFFF',
-                      border: '1px solid rgba(200, 164, 100, 0.3)',
+                      backgroundColor: '#FAF7F2',
+                      color: '#1A1815',
+                      border: '1px solid rgba(166, 129, 66, 0.3)',
                       padding: '12px 14px 12px 40px',
                       borderRadius: '4px',
                       fontSize: '13px',
-                      outline: 'none'
+                      outline: 'none',
+                      boxSizing: 'border-box'
                     }}
                   />
-                  <Phone size={16} style={{ position: 'absolute', left: '14px', top: '13px', color: '#C8A464' }} />
+                  <Phone size={16} style={{ position: 'absolute', left: '14px', top: '13px', color: '#A68142' }} />
                 </div>
               </div>
 
               {/* Math CAPTCHA */}
               <div style={{
-                backgroundColor: '#0D0B09',
-                border: '1px dashed #C8A464',
+                backgroundColor: '#FAF7F2',
+                border: '1px dashed #A68142',
                 padding: '14px',
                 borderRadius: '4px'
               }}>
-                <label style={{ fontSize: '12px', color: '#C8A464', fontWeight: '700', display: 'block', marginBottom: '6px' }}>
+                <label style={{ fontSize: '12px', color: '#A68142', fontWeight: '700', display: 'block', marginBottom: '6px' }}>
                   Security Verification: What is {num1} + {num2} ? *
                 </label>
                 <input
@@ -244,13 +247,14 @@ export default function BrochureModal({ isOpen, onClose }) {
                   onChange={(e) => setFormData({ ...formData, captchaAnswer: e.target.value })}
                   style={{
                     width: '100%',
-                    backgroundColor: '#15120E',
-                    color: '#FFFFFF',
-                    border: '1px solid rgba(200, 164, 100, 0.3)',
+                    backgroundColor: '#FFFFFF',
+                    color: '#1A1815',
+                    border: '1px solid rgba(166, 129, 66, 0.3)',
                     padding: '10px 12px',
                     borderRadius: '4px',
                     fontSize: '13px',
-                    outline: 'none'
+                    outline: 'none',
+                    boxSizing: 'border-box'
                   }}
                 />
               </div>
@@ -262,8 +266,8 @@ export default function BrochureModal({ isOpen, onClose }) {
                   marginTop: '10px',
                   width: '100%',
                   padding: '16px',
-                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '700',
                   fontSize: '13px',
@@ -284,31 +288,31 @@ export default function BrochureModal({ isOpen, onClose }) {
               width: '60px',
               height: '60px',
               borderRadius: '50%',
-              backgroundColor: 'rgba(200, 164, 100, 0.15)',
-              border: '2px solid #C8A464',
+              backgroundColor: 'rgba(166, 129, 66, 0.15)',
+              border: '2px solid #A68142',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto 16px',
-              color: '#C8A464'
+              color: '#A68142'
             }}>
               <CheckCircle2 size={36} />
             </div>
 
-            <div style={{ fontSize: '12px', color: '#C8A464', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>
+            <div style={{ fontSize: '12px', color: '#A68142', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '4px' }}>
               DISPATCH COMPLETE
             </div>
 
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#FFFFFF', marginBottom: '16px' }}>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '28px', color: '#1A1815', marginBottom: '16px' }}>
               Brochure Dispatched
             </h2>
 
-            <p style={{ fontSize: '14px', color: '#B0A89C', marginBottom: '24px', lineHeight: '1.6' }}>
+            <p style={{ fontSize: '14px', color: '#5E574F', marginBottom: '24px', lineHeight: '1.6' }}>
               The official project brochure and pricing sheet have been dispatched to:
               <br />
               <strong>{formData.email}</strong> & <strong>{formData.phone}</strong>
               <br />
-              <span style={{ fontSize: '12px', color: '#C8A464' }}>[Reference ID: {refId}]</span>
+              <span style={{ fontSize: '12px', color: '#A68142' }}>[Reference ID: {refId}]</span>
             </p>
 
             <div style={{ display: 'flex', gap: '12px', flexDirection: 'column' }}>
@@ -318,8 +322,8 @@ export default function BrochureModal({ isOpen, onClose }) {
                 rel="noopener noreferrer"
                 style={{
                   padding: '14px',
-                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   textDecoration: 'none',
                   fontWeight: '700',
                   fontSize: '12px',
@@ -341,8 +345,8 @@ export default function BrochureModal({ isOpen, onClose }) {
                 style={{
                   padding: '12px',
                   background: 'transparent',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  color: '#FFFFFF',
+                  border: '1px solid rgba(166, 129, 66, 0.4)',
+                  color: '#A68142',
                   fontWeight: '600',
                   fontSize: '12px',
                   textTransform: 'uppercase',

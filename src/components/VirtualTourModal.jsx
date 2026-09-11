@@ -49,33 +49,33 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
       boxSizing: 'border-box'
     }}>
       <div style={{
-        backgroundColor: '#0D0B09',
-        border: '2px solid #C8A464',
+        backgroundColor: '#FFFFFF',
+        border: '2px solid #A68142',
         borderRadius: '8px',
         width: '100%',
         maxWidth: '1200px',
         maxHeight: '90vh',
         overflowY: 'auto',
-        color: '#FFFFFF',
-        boxShadow: '0 25px 60px rgba(0,0,0,0.95)',
+        color: '#1A1815',
+        boxShadow: '0 25px 60px rgba(166, 129, 66, 0.25)',
         display: 'flex',
         flexDirection: 'column'
       }}>
         {/* Modal Top Header */}
         <div style={{
           padding: '24px 32px',
-          borderBottom: '1px solid rgba(200, 164, 100, 0.3)',
+          borderBottom: '1px solid rgba(166, 129, 66, 0.3)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          backgroundColor: '#15120E'
+          backgroundColor: '#FAF7F2'
         }}>
           <div>
-            <div style={{ fontSize: '11px', color: '#C8A464', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <div style={{ fontSize: '11px', color: '#A68142', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '2px', display: 'flex', alignItems: 'center', gap: '6px' }}>
               <Eye size={14} />
               IMMERSIVE 360° VIRTUAL WALKTHROUGH
             </div>
-            <h2 style={{ fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif", fontSize: '26px', color: '#FFFFFF', margin: '4px 0 0' }}>
+            <h2 style={{ fontFamily: "'Outfit', 'Cormorant Garamond', sans-serif", fontSize: '26px', color: '#1A1815', margin: '4px 0 0' }}>
               Experience Forbes Fab Luxe Residences in 3D
             </h2>
           </div>
@@ -84,8 +84,8 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
             onClick={onClose}
             style={{
               backgroundColor: 'transparent',
-              border: '1px solid #C8A464',
-              color: '#C8A464',
+              border: '1px solid #A68142',
+              color: '#A68142',
               padding: '8px',
               borderRadius: '50%',
               cursor: 'pointer',
@@ -106,14 +106,14 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
               position: 'relative',
               borderRadius: '6px',
               overflow: 'hidden',
-              border: '1px solid #C8A464',
-              backgroundColor: '#000000',
-              boxShadow: '0 15px 35px rgba(0,0,0,0.8)'
+              border: '1px solid #A68142',
+              backgroundColor: '#FAF7F2',
+              boxShadow: '0 15px 35px rgba(166, 129, 66, 0.15)'
             }}>
               <img
                 src={currentRoom.img}
                 alt={currentRoom.title}
-                style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block', filter: 'brightness(0.92)' }}
+                style={{ width: '100%', height: '380px', objectFit: 'cover', display: 'block' }}
               />
 
               {/* 360 Indicator Badge */}
@@ -121,12 +121,12 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
                 position: 'absolute',
                 top: '16px',
                 left: '16px',
-                backgroundColor: 'rgba(13, 11, 9, 0.85)',
-                border: '1px solid #C8A464',
+                backgroundColor: 'rgba(250, 247, 242, 0.92)',
+                border: '1px solid #A68142',
                 padding: '6px 14px',
                 borderRadius: '20px',
                 fontSize: '11px',
-                color: '#C8A464',
+                color: '#A68142',
                 fontWeight: '800',
                 letterSpacing: '1px',
                 display: 'flex',
@@ -139,10 +139,10 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
             </div>
 
             <div style={{ marginTop: '16px' }}>
-              <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#FFFFFF', marginBottom: '6px' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#1A1815', marginBottom: '6px' }}>
                 {currentRoom.title}
               </h3>
-              <p style={{ fontSize: '13px', color: '#A0988A', lineHeight: '1.5' }}>
+              <p style={{ fontSize: '13px', color: '#5E574F', lineHeight: '1.5' }}>
                 {currentRoom.desc}
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
           {/* Right Column: Room Selector & VR Booking */}
           <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
-              <div style={{ fontSize: '12px', color: '#C8A464', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '14px' }}>
+              <div style={{ fontSize: '12px', color: '#A68142', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '1.5px', marginBottom: '14px' }}>
                 SELECT RESIDENCE ZONE
               </div>
 
@@ -161,8 +161,8 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
                     key={room.id}
                     onClick={() => setActiveRoom(room.id)}
                     style={{
-                      backgroundColor: activeRoom === room.id ? '#15120E' : '#050403',
-                      border: activeRoom === room.id ? '1px solid #C8A464' : '1px solid rgba(200, 164, 100, 0.15)',
+                      backgroundColor: activeRoom === room.id ? '#FAF7F2' : '#FFFFFF',
+                      border: activeRoom === room.id ? '1px solid #A68142' : '1px solid rgba(166, 129, 66, 0.2)',
                       borderRadius: '6px',
                       padding: '14px 18px',
                       cursor: 'pointer',
@@ -172,10 +172,10 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
                       justifyContent: 'space-between'
                     }}
                   >
-                    <span style={{ fontSize: '13px', fontWeight: '700', color: activeRoom === room.id ? '#C8A464' : '#FFFFFF' }}>
+                    <span style={{ fontSize: '13px', fontWeight: '700', color: activeRoom === room.id ? '#A68142' : '#1A1815' }}>
                       {room.title}
                     </span>
-                    <Eye size={16} style={{ color: activeRoom === room.id ? '#C8A464' : '#A0988A' }} />
+                    <Eye size={16} style={{ color: activeRoom === room.id ? '#A68142' : '#5E574F' }} />
                   </div>
                 ))}
               </div>
@@ -183,17 +183,17 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
 
             {/* VR Headset Booking Box */}
             <div style={{
-              backgroundColor: '#15120E',
-              border: '1px solid #C8A464',
+              backgroundColor: '#FAF7F2',
+              border: '1px solid #A68142',
               borderRadius: '6px',
               padding: '20px',
               textAlign: 'center'
             }}>
-              <div style={{ fontSize: '12px', fontWeight: '800', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>
+              <div style={{ fontSize: '12px', fontWeight: '800', color: '#A68142', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '6px' }}>
                 REQUEST AT-HOME VR HEADSET DEMO
               </div>
-              <p style={{ fontSize: '12px', color: '#A0988A', marginBottom: '16px' }}>
-                Our concierge will dispatch an Meta Quest VR headset directly to your residence for a private 3D walkthrough.
+              <p style={{ fontSize: '12px', color: '#5E574F', marginBottom: '16px' }}>
+                Our concierge will dispatch a Meta Quest VR headset directly to your residence for a private 3D walkthrough.
               </p>
               <button
                 onClick={() => {
@@ -203,8 +203,8 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
                 style={{
                   width: '100%',
                   padding: '12px',
-                  background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-                  color: '#0D0B09',
+                  backgroundColor: '#A68142',
+                  color: '#FFFFFF',
                   border: 'none',
                   fontWeight: '800',
                   fontSize: '11px',

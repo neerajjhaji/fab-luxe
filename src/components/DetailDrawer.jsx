@@ -31,13 +31,13 @@ export default function DetailDrawer({ isOpen, onClose, onOpenSiteVisit, onOpenB
         width: '100%',
         maxWidth: '560px',
         height: '100%',
-        backgroundColor: '#15120E',
-        borderLeft: '1px solid #C8A464',
+        backgroundColor: '#FFFFFF',
+        borderLeft: '1px solid #A68142',
         padding: '36px 32px',
         overflowY: 'auto',
-        color: '#FFFFFF',
+        color: '#1A1815',
         position: 'relative',
-        boxShadow: '-10px 0 30px rgba(0,0,0,0.8)'
+        boxShadow: '-10px 0 30px rgba(166, 129, 66, 0.2)'
       }}>
         {/* Close button */}
         <button
@@ -48,37 +48,37 @@ export default function DetailDrawer({ isOpen, onClose, onOpenSiteVisit, onOpenB
             right: '24px',
             background: 'transparent',
             border: 'none',
-            color: '#C8A464',
+            color: '#A68142',
             cursor: 'pointer'
           }}
         >
           <X size={28} />
         </button>
 
-        <div style={{ fontSize: '11px', color: '#C8A464', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '600', marginBottom: '8px' }}>
+        <div style={{ fontSize: '11px', color: '#A68142', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '600', marginBottom: '8px' }}>
           ARCHITECTURAL SPECIFICATIONS
         </div>
 
-        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '32px', color: '#FFFFFF', fontWeight: '600', marginBottom: '8px' }}>
+        <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '32px', color: '#1A1815', fontWeight: '600', marginBottom: '8px' }}>
           Forbes Fab Luxe Technical Portfolio
         </h2>
 
-        <p style={{ fontSize: '13px', color: '#B0A89C', marginBottom: '28px' }}>
+        <p style={{ fontSize: '13px', color: '#5E574F', marginBottom: '28px' }}>
           RERA Registered: {FAB_LUXE_PROJECT_DETAILS.reraNo} • Sector 4, Greater Noida West
         </p>
 
         {/* Specifications Accordion List */}
         <div style={{ display: 'grid', gap: '24px', marginBottom: '36px' }}>
           {specs.map((group, idx) => (
-            <div key={idx} style={{ backgroundColor: '#0D0B09', border: '1px solid rgba(200, 164, 100, 0.25)', borderRadius: '4px', padding: '20px' }}>
-              <h3 style={{ fontSize: '15px', color: '#C8A464', fontWeight: '600', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div key={idx} style={{ backgroundColor: '#FAF7F2', border: '1px solid rgba(166, 129, 66, 0.25)', borderRadius: '4px', padding: '20px' }}>
+              <h3 style={{ fontSize: '15px', color: '#A68142', fontWeight: '600', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Building2 size={16} />
                 {group.category}
               </h3>
               <div style={{ display: 'grid', gap: '8px' }}>
                 {group.items.map((item, itemIdx) => (
-                  <div key={itemIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '13px', color: '#D0D0D0', lineHeight: '1.4' }}>
-                    <CheckCircle2 size={15} style={{ color: '#C8A464', marginTop: '2px', flexShrink: 0 }} />
+                  <div key={itemIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '13px', color: '#333333', lineHeight: '1.4' }}>
+                    <CheckCircle2 size={15} style={{ color: '#A68142', marginTop: '2px', flexShrink: 0 }} />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -94,8 +94,8 @@ export default function DetailDrawer({ isOpen, onClose, onOpenSiteVisit, onOpenB
             style={{
               flex: 1,
               padding: '14px',
-              background: 'linear-gradient(135deg, #C8A464 0%, #A68142 100%)',
-              color: '#0D0B09',
+              backgroundColor: '#A68142',
+              color: '#FFFFFF',
               border: 'none',
               fontWeight: '700',
               fontSize: '12px',
@@ -114,8 +114,8 @@ export default function DetailDrawer({ isOpen, onClose, onOpenSiteVisit, onOpenB
               flex: 1,
               padding: '14px',
               background: 'transparent',
-              border: '1px solid #C8A464',
-              color: '#C8A464',
+              border: '1px solid #A68142',
+              color: '#A68142',
               fontWeight: '600',
               fontSize: '12px',
               textTransform: 'uppercase',
