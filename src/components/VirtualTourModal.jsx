@@ -11,25 +11,25 @@ export default function VirtualTourModal({ isOpen, onClose, onOpenSiteVisit }) {
       id: 'living',
       title: 'Double-Height Grand Living Room',
       desc: 'High ceiling 12-ft living hall with floor-to-ceiling acoustic glass walls overlooking the 270° botanical greens.',
-      img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80'
+      img: '/images/1.png'
     },
     {
       id: 'master',
       title: 'Master Presidential Suite',
       desc: 'Expansive master bedroom with walk-in Italian closet, hardwood flooring, and ensuite marble Jacuzzi bathroom.',
-      img: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80'
+      img: '/images/2.png'
     },
     {
       id: 'sundeck',
       title: '8-Ft Deep Sky Sundeck Deck',
       desc: 'Wrap-around balcony space with private vertical planter garden and panoramic Sector 4 skyline views.',
-      img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80'
+      img: '/images/3.png'
     },
     {
       id: 'clubhouse',
       title: '75,000 Sq.Ft. Forbes Grand Clubhouse',
       desc: 'Heated indoor swimming pool, private cigar bar lounge, mini bowling alley, and 24/7 concierge lobby.',
-      img: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80'
+      img: '/images/banner.jpeg'
     }
   ];
 
